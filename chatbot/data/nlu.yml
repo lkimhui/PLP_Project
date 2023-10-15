@@ -100,13 +100,24 @@ nlu:
     - call me [John](name)
     - [Nolan](name) is my name
 
-- intent: provide_education_background
+- intent: provide_education
   examples: |
     - I have a [degree](education)
     - I graduated from [university](education)
     - I finished [Form 6](education)
     - [phd](education)
     - education: [High School](education)
+
+- intent: provide_profession
+  examples: |
+    - I am an [Engineer](profession)
+    - an [Engineer](profession)
+    - I work as an [Engineer](profession)
+
+- intent: provide_skillset
+  examples: |
+    - [python]{"entity":"skillset"}, [R]{"entity":"skillset"}, [java]{"entity":"skillset"}
+    - [leadership]{"entity":"skillset"}, [code review]{"entity":"skillset"}
 
 - intent: request_coverletter
   examples: |

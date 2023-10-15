@@ -20,7 +20,7 @@ class ActionGetName(Action):
     def name(self) -> Text:
         return "action_get_username"
 
-    def run(self, dispatcher: CollectingDispatcher,
+    async def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
@@ -55,15 +55,15 @@ class ActionProcessUserForm(Action):
     def name(self) -> Text:
         return "action_process_user_form"
 
-    def run(self, dispatcher: CollectingDispatcher,
+    async def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         thankyou_messages = [
-            "Thank you. ",
-            "So greate to hear that. ",
-            "Great to hear that. ",
-            "My pleasure to hear that. ",
+            "Thank you. Let's start.",
+            "So great to hear that. Let's jump into the topics.",
+            "Great to hear that. Let's begin with the first topic.",
+            "My pleasure to hear that. Let's start.",
             "Great! Let's start. "
         ]
         
@@ -74,14 +74,15 @@ class ActionProcessUserForm(Action):
         return []
     
     
-class ValidateMyForm(Action):
+class ValidateUserForm(Action):
 
     def name(self) -> Text:
         return "user_details_form"
 
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+    async def run(self, 
+                  dispatcher: CollectingDispatcher,
+                  tracker: Tracker,
+                  domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         required_slots = ["name", "education", "profession", "skillset"]
         
@@ -97,7 +98,7 @@ class ActionSubmit(Action):
     def name(self) -> Text: 
         return "action_submit_user_form"
     
-    def run(self, dispatcher: CollectingDispatcher,
+    async def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         

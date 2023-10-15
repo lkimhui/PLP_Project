@@ -7,14 +7,14 @@ rules:
     - intent: bot_challenge
     - action: utter_iamabot
 
-- rule: response to affirmation
+- rule: response to affirmation by activating user form
   steps:
     - intent: affirm
     - action: action_process_user_form
     - action: user_details_form
     - active_loop: user_details_form
 
-- rule: Submit the form
+- rule: Submit user form
   condition:
     - active_loop: user_details_form
   steps:
@@ -23,6 +23,9 @@ rules:
     - slot_was_set:
       - requested_slot: null
     - action: action_submit_user_form
+    - action: utter_request_acknowledgement
+    - intent: affirm
+    - action: utter_appreciation
 
 - rule: response to denial
   condition:
@@ -31,9 +34,6 @@ rules:
     - intent: deny
     - action: utter_respond_denial
     - action: utter_goodbye
-    - active_loop: null
-    - slot_was_set:
-      - requested_slot: null
 
 - rule: ask user to rephrase whenever NLU confidence level is low
   steps:

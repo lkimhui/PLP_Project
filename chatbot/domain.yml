@@ -14,7 +14,9 @@ intents:
   - deny
   - not_sure
   - out_of_scope_resume
-  - provide_education_background
+  - provide_education
+  - provide_profession
+  - provide_skillset
 
 
 ################################
@@ -82,6 +84,11 @@ responses:
   - text: "Sup! I am your GenRes Assistant. How can I help you today?"
   - text: "Yo, what's up! My name is GenRes. What can I do for you today?"
 
+  utter_request_details:
+  - text: "As cover letter has rigid structure, I would need more details from you. Is it alright?"
+  - text: "To write the cover letter, I would need more details from you to fit the structure. Are you good with it?"
+  - text: "To get start with the CV writing, I am going to request more details from you. Is that fine?"
+
   utter_ask_name:
   - text: "Sure. Before that, how can I address you?"
   - text: "Sure. May I have your name please?"
@@ -101,10 +108,13 @@ responses:
   - text: "Any specific skillset of yours to highlight?"
   - text: "Can you share more of your technical strength?"
 
-  utter_request_details:
-  - text: "As cover letter has rigid structure, I would need more details from you. Is it alright?"
-  - text: "To write the cover letter, I would need more details from you to fit the structure. Are you good with it?"
-  - text: "To get start with the CV writing, I am going to request more details from you. Is that fine?"
+  utter_request_acknowledgement:
+  - text: "Is everything good?"
+  - text: "Is all information intact?"
+
+  utter_appreciation:
+  - text: "Thank you for your confirmation. I will proceed with the submission."
+  - text: "Appreciate your acknowledgement. Please stay tuned while I am generating the request..."
 
   utter_respond_denial:
   - text: "I understand your consideration, thank you for considering it."
