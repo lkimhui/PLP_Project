@@ -21,7 +21,7 @@ intents:
 ### Entities
 ################################
 entities:
-  - requestCV
+  # - requestCV
   - cv
   - name
   - education

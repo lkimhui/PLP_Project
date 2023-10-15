@@ -110,11 +110,11 @@ nlu:
 
 - intent: request_coverletter
   examples: |
-    - [write](requestCV) me a [cover letter](cv)
-    - [write](requestCV) a [cv](cv)
-    - [compose](requestCV) a [CV](cv) for company
-    - [compose](requestCV) a [Cv](cv) for job application
-    - [need](requestCV) a [coverpage](cv) for a job
+    - [write]{"entity":"cv", "role":"action"} me a [cover letter]{"entity":"cv", "role":"object"}
+    - [write]{"entity":"cv", "role":"action"} a [cv]{"entity":"cv", "role":"object"}
+    - [compose]{"entity":"cv", "role":"action"} a [CV]{"entity":"cv", "role":"object"} for company
+    - [compose]{"entity":"cv", "role":"action"} a [Cv]{"entity":"cv", "role":"object"} for job application
+    - [need]{"entity":"cv", "role":"action"} a [coverpage]{"entity":"cv", "role":"object"} for a job
 
 - intent: out_of_scope_resume
   examples: |
