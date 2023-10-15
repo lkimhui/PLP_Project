@@ -1,0 +1,32 @@
+version: "3.1"
+
+stories:
+
+- story: chat with affirmation
+  steps:
+  - intent: greet
+  - action: utter_bot_intro
+  - intent: request_coverletter
+  - action: utter_ask_name
+  - intent: provide_name
+    entities:
+      - name: John
+      - name: Soon Hang
+  - action: action_get_username
+
+- story: small chat with affirmation
+  steps:
+  - intent: greet_smalltalk
+  - action: utter_smalltalk_intro
+  - intent: request_coverletter
+  - action: utter_ask_name
+  - intent: provide_name
+    entities:
+      - name: John
+      - name: Soon Hang
+  - action: action_get_username
+
+- story: handle_out_of_scope
+  steps:
+  - intent: out_of_scope_resume
+  - action: utter_out_of_scope

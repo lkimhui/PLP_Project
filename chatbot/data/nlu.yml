@@ -1,0 +1,163 @@
+version: "3.1"
+
+
+################################
+### NLU
+################################
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: greet_smalltalk
+  examples: |
+    - yo
+    - sup
+    - what's up
+    - hey
+    - hi
+
+- intent: affirm
+  examples: |
+    - yes
+    - sure
+    - certainly
+    - absolutely
+    - go ahead
+    - yes please
+    - yes, please
+    - sure, please
+    - why not
+    - carry on
+    - please proceed
+    - I am on board with the next step
+    - you have my go-ahead
+    - proceed as planned
+    - I approve
+    - I am comfortable with that
+
+- intent: deny
+  examples: |
+    - I doubt so
+    - doubt so
+    - no
+    - probably no
+    - I am not comfortable with that
+    - I don't think it's a good idea
+    - not a good idea
+    - I have reservations for that
+    - I would prefer to reconsider
+    - reconsider that please
+    - I am not on board with that
+    - delay it please
+    - delay the step please
+    - permission not granted
+
+- intent: not_sure
+  examples: |
+    - back your pardon
+    - pardon
+    - sorry, can you repeat
+    - can you repeat
+    - pardon me
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: provide_name
+  examples: |
+    - my name is [Soon Hang](name)
+    - name: [John](name)
+    - [Nolan](name)
+    - [Soon Hang](name) here
+    - call me [John](name)
+    - [Nolan](name) is my name
+
+- intent: provide_education_background
+  examples: |
+    - I have a [degree](education)
+    - I graduated from [university](education)
+    - I finished [Form 6](education)
+    - [phd](education)
+    - education: [High School](education)
+
+- intent: request_coverletter
+  examples: |
+    - [write](requestCV) me a [cover letter](cv)
+    - [write](requestCV) a [cv](cv)
+    - [compose](requestCV) a [CV](cv) for company
+    - [compose](requestCV) a [Cv](cv) for job application
+    - [need](requestCV) a [coverpage](cv) for a job
+
+- intent: out_of_scope_resume
+  examples: |
+    - write me a [resume](resume)
+    - compose a [resume](resume)
+    - [resume](resume) please
+    - [resume](resume)
+    - I need a [resume](resume)
+
+
+################################
+### Synonym
+################################
+- synonym: finish
+  examples: |
+    - pass
+    - hold
+    - held
+    - own
+    - clear
+
+- synonym: cover letter
+  examples: |
+    - CV
+    - letter
+    - cover essay
+    - application letter
+    - cv
+    - coverletter
+    - cover page
+    - coverpage
+    - page
+    - cV
+    - Cv
+
+
+################################
+### Regex
+################################
+- regex: \[(\w+)\]\(name\)
+  examples: |
+    - [John](name) here
+
+- regex: \[(\w+)\]\(cv\)
+  examples: |
+    - write a [cover letter](cv) please

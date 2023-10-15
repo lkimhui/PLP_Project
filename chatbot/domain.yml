@@ -1,0 +1,161 @@
+version: "3.1"
+
+################################
+### Intents
+################################
+intents:
+  - greet
+  - greet_smalltalk
+  - goodbye
+  - bot_challenge
+  - provide_name
+  - request_coverletter
+  - affirm
+  - deny
+  - not_sure
+  - out_of_scope_resume
+  - provide_education_background
+
+
+################################
+### Entities
+################################
+entities:
+  - requestCV
+  - cv
+  - name
+  - education
+  - profession
+  - skillset
+
+
+################################
+### Slots
+################################
+slots:
+  name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: name
+  education:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: education
+  profession:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: profession
+  skillset:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: skillset
+
+
+################################
+### Responses
+################################
+responses:
+  utter_goodbye:
+  - text: "See you next time then. Bye~"
+  - text: "Hope to serve you next time. Bye~"
+  - text: "Great to talk to you thus far. See ya."
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_out_of_scope:
+  - text: "Sorry that, as of 8th Oct 2023, I am still a bot capable of composing Cover Letter only."
+
+  utter_bot_intro:
+  - text: "Hey there. I'm your GenRes Assistant. How can I help you today?"
+  - text: "Hi! My name is GenRes. How can I help you today?"
+
+  utter_smalltalk_intro:
+  - text: "Sup! I am your GenRes Assistant. How can I help you today?"
+  - text: "Yo, what's up! My name is GenRes. What can I do for you today?"
+
+  utter_ask_name:
+  - text: "Sure. Before that, how can I address you?"
+  - text: "Sure. May I have your name please?"
+  - text: "Sure. Before that, what is your name?"
+
+  utter_ask_education:
+  - text: "What is your education background?"
+  - text: "What is your academic experience?"
+  - text: "Can you share your educational experience?"
+
+  utter_ask_profession:
+  - text: "What is your professional background?"
+  - text: "What is your past or current working experience?"
+  - text: "Can you share a fair bit of your professional background?"
+
+  utter_ask_skillset:
+  - text: "Any specific skillset of yours to highlight?"
+  - text: "Can you share more of your technical strength?"
+
+  utter_request_details:
+  - text: "As cover letter has rigid structure, I would need more details from you. Is it alright?"
+  - text: "To write the cover letter, I would need more details from you to fit the structure. Are you good with it?"
+  - text: "To get start with the CV writing, I am going to request more details from you. Is that fine?"
+
+  utter_respond_denial:
+  - text: "I understand your consideration, thank you for considering it."
+  - text: "I appreciate your response and respect your choice."
+  - text: "Noted, I fully respect your decision."
+  - text: "Thank you for letting me know your consideration."
+
+  utter_collect_info:
+  - text: "Below are your personal information that we have collected:\n
+          \n
+          Name:\n
+          {name}\n
+          \n
+          Educational Background:\n
+          {education}\n
+          \n
+          Professional Background:\n
+          {profession}\n
+          \n
+          Skillset:\n
+          {skillset}\n
+          \n
+          "
+
+  utter_default:
+  - text: "Sorry, I could not get your last message. Can you repeat?"
+  - text: "I'm sorry, I didn't quite understand that. Could you rephrase?"
+  - text: "Beg you pardon. Can you rephrase as I could not quite get your last response."
+
+
+################################
+### Forms
+################################
+forms:
+  user_details_form:
+    required_slots:
+      - name
+      - education
+      - profession
+      - skillset
+
+
+################################
+### Actions
+################################
+actions:
+  - action_get_username
+  - action_process_user_form
+  - action_submit_user_form
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

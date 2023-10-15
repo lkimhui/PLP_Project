@@ -1,0 +1,10 @@
+[
+  {
+    "name": "\\[(\\w+)\\]\\(cv\\)",
+    "pattern": "write a [cover letter](cv) please"
+  },
+  {
+    "name": "\\[(\\w+)\\]\\(name\\)",
+    "pattern": "[John](name) here"
+  }
+]
