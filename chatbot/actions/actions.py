@@ -108,7 +108,7 @@ class ActionSubmit(Action):
         profession = tracker.get_slot("profession")
         skillset = tracker.get_slot("skillset")
         
-        response_text = response["text"].format(name=name, education=education, profession=profession, skillset=skillset)
+        response_text = response["text"].format(name=name, education=education, profession=profession, skillset=skillset) + "\n"
         
         dispatcher.utter_message(text=response_text)
         

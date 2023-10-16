@@ -33,6 +33,8 @@ entities:
 
 ################################
 ### Slots
+# to add role for education: subject and level
+# to add role for profession: title and level
 ################################
 slots:
   name:
@@ -54,7 +56,7 @@ slots:
       - type: from_entity
         entity: profession
   skillset:
-    type: text
+    type: list
     influence_conversation: true
     mappings:
       - type: from_entity
