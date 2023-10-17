@@ -1,9 +1,9 @@
 ### How To Run Application
 
-```aidl
+```shell
 pip install streamlit
 ```
 
-```aidl
+```shell
 streamlit run app.py
 ```
