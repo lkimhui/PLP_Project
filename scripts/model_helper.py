@@ -8,7 +8,7 @@ def call_t5_base_fine_tune_512(model_name, intput):
     # Load the tokenizer
     print("Loading Model...")
     tokenizer = T5Tokenizer.from_pretrained('t5-base', model_max_length=1024)
-    model = T5ForConditionalGeneration.from_pretrained("ShashiVish/t5-base-fine-tune-cover-letter", max_length=2044)
+    model = T5ForConditionalGeneration.from_pretrained("ShashiVish/t5-base-fine-tune-1024-cover-letter", max_length=2044)
 
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     model.to(device)
