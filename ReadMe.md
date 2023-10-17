@@ -5,5 +5,6 @@ pip install streamlit
 ```
 
 ```shell
+cd scripts 
 streamlit run app.py
 ```
