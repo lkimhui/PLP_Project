@@ -31,6 +31,7 @@ pipeline:
   "features": [
     ["low", "title", "upper"],
   ]
+  BILOU_flag: true
 - name: RegexEntityExtractor
   case_sensitive: true
   use_lookup_tables: true

@@ -84,7 +84,7 @@ class ValidateUserForm(Action):
                   tracker: Tracker,
                   domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
-        required_slots = ["name", "education", "profession", "skillset"]
+        required_slots = ["name", "qualification", "title", "skillset"]
         
         for slot_name in required_slots:
             if tracker.slots.get(slot_name) is None:
@@ -104,11 +104,11 @@ class ActionSubmit(Action):
         
         response = domain["responses"]["utter_collect_info"][0]
         name = tracker.get_slot("name")
-        education = tracker.get_slot("education")
-        profession = tracker.get_slot("profession")
+        qualification = tracker.get_slot("qualification")
+        title = tracker.get_slot("title")
         skillset = tracker.get_slot("skillset")
         
-        response_text = response["text"].format(name=name, education=education, profession=profession, skillset=skillset) + "\n"
+        response_text = response["text"].format(name=name, education=qualification, title=title, skillset=skillset) + "\n"
         
         dispatcher.utter_message(text=response_text)
         

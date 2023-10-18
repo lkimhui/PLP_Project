@@ -2,128 +2,128 @@ version: "3.1"
 nlu:
   - lookup: profession
     examples: |
-      - Chief information officer (CIO)
-      - Chief technology officer (CTO)
-      - IT manager
-      - IT director
-      - IT project manager
-      - Director of technology
-      - Technical operations officer
-      - Information management systems director
-      - Senior IT consultant
-      - Technical lead
-      - Cloud systems engineer
-      - Cloud computing engineer
-      - Cloud architect
-      - Cloud system administrator
-      - Cloud consultant
-      - Cloud services provider
-      - Cloud services developer
-      - Cloud product manager
-      - Software engineer
-      - Software architect
-      - Software test engineer
-      - Software development manager
-      - Software development engineer
-      - Artificial intelligence engineer
-      - Application developer
-      - Application designer
-      - Application engineer
-      - DevOps engineer
-      - Computer programmer
-      - Lead programmer
-      - Iteration manager
-      - Frameworks specialist
-      - Game developer
-      - Computer network specialist
-      - Computer systems analyst
-      - Computer and information research scientist
-      - Computer and information research manager
-      - Network administrator
-      - Network architect
-      - Network analyst
-      - Network technician
-      - Network operations engineer
-      - Network reliability engineer
-      - Network infrastructure specialist
-      - Database developer
-      - Database analyst
-      - Database manager
-      - Database engineer
-      - Database specialist
-      - Database coordinator
-      - Data quality manager
-      - Data analyst
-      - Data engineer
-      - Data modeler
-      - Data scientist
-      - Data architect
-      - Information architect
-      - Computer data scientist
-      - Security specialist
-      - IT security analyst
-      - Network security engineer
-      - Information security analyst
-      - Information security engineer
-      - Information security manager
-      - Information security consultant
-      - Information security project manager
-      - Information security program manager
-      - Management information director
-      - Cyber security specialist
-      - Cyber security manager
-      - Computer forensic investigator
-      - Technology manager
-      - Technology assistant
-      - Technology specialist
-      - Technical account manager
-      - IT sales executive
-      - IT sales director
-      - Business analyst
-      - Business systems analyst
-      - Web designer
-      - Web engineer
-      - Web producers
-      - Web development manager
-      - Web development project manager
-      - User experience (UX) designer
-      - User interface (UI) designer
-      - UX/UI researcher
-      - UX/UI specialist
+      - Chief Information Officer (CIO)
+      - Chief Technology Officer (CTO)
+      - IT Manager
+      - IT Director
+      - IT Project Manager
+      - Director of Technology
+      - Technical Operations Officer
+      - Information Management Systems Director
+      - Senior IT Consultant
+      - Technical Lead
+      - Cloud Systems Engineer
+      - Cloud Computing Engineer
+      - Cloud Architect
+      - Cloud System Administrator
+      - Cloud Consultant
+      - Cloud Services Provider
+      - Cloud Services Developer
+      - Cloud Product Manager
+      - Software Engineer
+      - Software Architect
+      - Software Test Engineer
+      - Software Development Manager
+      - Software Development Engineer
+      - Artificial Intelligence Engineer
+      - Application Developer
+      - Application Designer
+      - Application Engineer
+      - DevOps Engineer
+      - Computer Programmer
+      - Lead Programmer
+      - Iteration Manager
+      - Frameworks Specialist
+      - Game Developer
+      - Computer Network Specialist
+      - Computer Systems Analyst
+      - Computer and Information Research Scientist
+      - Computer and Information Research Manager
+      - Network Administrator
+      - Network Architect
+      - Network Analyst
+      - Network Technician
+      - Network Operations Engineer
+      - Network Reliability Engineer
+      - Network Infrastructure Specialist
+      - Database Developer
+      - Database Analyst
+      - Database Manager
+      - Database Engineer
+      - Database Specialist
+      - Database Coordinator
+      - Data Quality Manager
+      - Data Analyst
+      - Data Engineer
+      - Data Modeler
+      - Data Scientist
+      - Data Architect
+      - Information Architect
+      - Computer Data Scientist
+      - Security Specialist
+      - IT Security Analyst
+      - Network Security Engineer
+      - Information Security Analyst
+      - Information Security Engineer
+      - Information Security Manager
+      - Information Security Consultant
+      - Information Security Project Manager
+      - Information Security Program Manager
+      - Management Information Director
+      - Cyber Security Specialist
+      - Cyber Security Manager
+      - Computer Forensic Investigator
+      - Technology Manager
+      - Technology Assistant
+      - Technology Specialist
+      - Technical Account Manager
+      - IT sales Executive
+      - IT sales Director
+      - Business Analyst
+      - Business systems Analyst
+      - Web Designer
+      - Web Engineer
+      - Web Producers
+      - Web Development Manager
+      - Web Development Project Manager
+      - User Experience (UX) Designer
+      - User Interface (UI) Designer
+      - UX/UI Researcher
+      - UX/UI Specialist
       - Webmaster
-      - Web producer
-      - Web project manager
-      - Web content manager
-      - Multimedia architect
-      - Web analytics developer
-      - Search engine optimization (SEO) consultant
-      - SEO manager
-      - Internet engineer
-      - Interaction designer
-      - Front-end designer
-      - Front-end developer
-      - Mobile developer
-      - Full-stack developer
-      - Systems designer
-      - Senior systems analyst
-      - Application support analyst
-      - Systems analyst
-      - IT coordinator
-      - IT manager
-      - Solutions architect
-      - Computer technician
-      - Computer support technician
-      - Help desk worker
-      - Help desk analyst
-      - Help desk support
-      - Help desk technician
-      - Desktop support specialist
-      - IT support specialist
-      - IT technician
-      - Problem manager
-      - Operations analyst
-      - Technical assistance specialist
-      - Technical specialist
-      - Technical support
-      - Support specialist
-      - Computer operator
+      - Web Producer
+      - Web Project Manager
+      - Web Content Manager
+      - Multimedia Architect
+      - Web Analytics Developer
+      - Search Engine Optimization (SEO) Consultant
+      - SEO Manager
+      - Internet Engineer
+      - Interaction Designer
+      - Front-end Designer
+      - Front-end Developer
+      - Mobile Developer
+      - Full Stack Developer
+      - Systems Designer
+      - Senior Systems Analyst
+      - Application Support Analyst
+      - Systems Analyst
+      - IT Coordinator
+      - IT Manager
+      - Solutions Architect
+      - Computer Technician
+      - Computer Support Technician
+      - Help Desk Worker
+      - Help Desk Analyst
+      - Help Desk Support
+      - Help Desk Technician
+      - Desktop Support Specialist
+      - IT Support Specialist
+      - IT Technician
+      - Problem Manager
+      - Operations Analyst
+      - Technical Assistance Specialist
+      - Technical Specialist
+      - Technical Support
+      - Support Specialist
+      - Computer Operator

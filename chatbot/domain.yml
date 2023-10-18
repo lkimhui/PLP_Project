@@ -27,6 +27,7 @@ entities:
   - cv
   - name
   - education
+  - principle
   - profession
   - skillset
 
@@ -43,18 +44,38 @@ slots:
     mappings:
       - type: from_entity
         entity: name
-  education:
+  qualification:
     type: text
     influence_conversation: true
     mappings:
       - type: from_entity
         entity: education
-  profession:
+  principle:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: principle
+  title:
     type: text
     influence_conversation: true
     mappings:
       - type: from_entity
         entity: profession
+        role: title
+  seniority:
+    type: categorical
+    values:
+      - junior
+      - senior
+      - principal
+      - staff
+      - senior staff
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: profession
+        role: seniority
   skillset:
     type: list
     influence_conversation: true
@@ -103,7 +124,7 @@ responses:
 
   utter_ask_profession:
   - text: "What is your professional background?"
-  - text: "What is your past or current working experience?"
+  - text: "What is your professional experience?"
   - text: "Can you share a fair bit of your professional background?"
 
   utter_ask_skillset:
@@ -127,17 +148,18 @@ responses:
   utter_collect_info:
   - text: "Below are your personal information that we have collected:\n
           \n
-          Name:\n
-          {name}\n
+          Personal Details:\n
+          Name: {name}\n
           \n
           Educational Background:\n
-          {education}\n
+          Qualification: {qualification}\n
+          Principle: {principle}\n
           \n
           Professional Background:\n
-          {profession}\n
+          Title: {title}\n
+          Seniority: {seniority}
           \n
-          Skillset:\n
-          {skillset}\n
+          Skillset: {skillset}\n
           \n
           "
 

@@ -110,9 +110,9 @@ nlu:
 
 - intent: provide_profession
   examples: |
-    - I am an [Engineer](profession)
-    - an [Engineer](profession)
-    - I work as an [Engineer](profession)
+    - I am a [Senior]{"entity":"profession", "role":"seniority"} [Engineer]{"entity":"profession", "role":"title"}
+    - an [Engineer]{"entity":"profession", "role":"title"}
+    - I work as a [Staff]{"entity":"profession", "role":"seniority"} [Engineer]{"entity":"profession", "role":"title"}
 
 - intent: provide_skillset
   examples: |
