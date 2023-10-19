@@ -30,6 +30,7 @@ entities:
   - principle
   - profession
   - skillset
+  - resume
 
 
 ################################
@@ -97,7 +98,7 @@ responses:
   - text: "I am a bot, powered by Rasa."
 
   utter_out_of_scope:
-  - text: "Sorry that, as of 8th Oct 2023, I am still a bot capable of composing Cover Letter only."
+  - text: "Sorry that, as of 19th Oct 2023, I am still a bot capable of composing Cover Letter only."
 
   utter_bot_intro:
   - text: "Hey there. I'm your GenRes Assistant. How can I help you today?"
@@ -149,17 +150,22 @@ responses:
   - text: "Below are your personal information that we have collected:\n
           \n
           Personal Details:\n
+          -----------------\n
           Name: {name}\n
           \n
           Educational Background:\n
+          -----------------------\n
           Qualification: {qualification}\n
           Principle: {principle}\n
           \n
           Professional Background:\n
+          ------------------------\n
           Title: {title}\n
-          Seniority: {seniority}
+          Seniority: {seniority}\n
           \n
-          Skillset: {skillset}\n
+          Skillset:\n
+          ---------\n
+          {skillset}\n
           \n
           "
 

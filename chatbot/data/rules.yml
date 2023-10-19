@@ -23,7 +23,6 @@ rules:
     - slot_was_set:
       - requested_slot: null
     - action: action_submit_user_form
-    - action: utter_request_acknowledgement
     - intent: affirm
     - action: utter_appreciation
 

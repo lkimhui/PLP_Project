@@ -93,12 +93,12 @@ nlu:
 
 - intent: provide_name
   examples: |
-    - my name is [Soon Hang](name)
-    - name: [John](name)
-    - [Nolan](name)
-    - [Soon Hang](name) here
-    - call me [John](name)
-    - [Nolan](name) is my name
+    - my name is [Soon Hang]{"entity":"name"}
+    - name: [John]{"entity":"name"}
+    - [Nolan]{"entity":"name"}
+    - [Soon Hang]{"entity":"name"} here
+    - call me [John]{"entity":"name"}
+    - [Nolan]{"entity":"name"} is my name
 
 - intent: provide_education
   examples: |
@@ -113,8 +113,8 @@ nlu:
 - intent: provide_profession
   examples: |
     - I am a [Senior]{"entity":"profession", "role":"seniority"} [Engineer]{"entity":"profession", "role":"title"}
-    - an [Engineer]{"entity":"profession", "role":"title"}
-    - I work as a [Staff]{"entity":"profession", "role":"seniority"} [Business Analyst]{"entity":"profession", "role":"title"}
+    - an [Principal]{"entity":"profession", "role":"seniority"} [Engineer]{"entity":"profession", "role":"title"}
+    - I work as a [Junior]{"entity":"profession", "role":"seniority"} [Business Analyst]{"entity":"profession", "role":"title"}
     - title: [Data Scientist]{"entity":"profession", "role":"title"}, level: [Senior]{"entity":"profession", "role":"seniority"}
     - profession: [Staff]{"entity":"profession", "role":"seniority"} [Data Engineer]{"entity":"profession", "role":"title"}
     - [Senior Staff]{"entity":"profession", "role":"seniority"} [Software Engineer]{"entity":"profession", "role":"title"}
@@ -134,11 +134,11 @@ nlu:
 
 - intent: out_of_scope_resume
   examples: |
-    - write me a [resume](resume)
-    - compose a [resume](resume)
-    - [resume](resume) please
-    - [resume](resume)
-    - I need a [resume](resume)
+    - write me a [resume]{"entity":"resume"}
+    - compose a [resume]{"entity":"resume"}
+    - [resume]{"entity":"resume"} please
+    - [resume]{"entity":"resume"}
+    - I need a [resume]{"entity":"resume"}
 
 
 ################################
