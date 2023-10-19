@@ -66,11 +66,11 @@ slots:
   seniority:
     type: categorical
     values:
-      - junior
-      - senior
-      - principal
-      - staff
-      - senior staff
+      - Junior
+      - Senior
+      - Principal
+      - Staff
+      - Senior Staff
     influence_conversation: false
     mappings:
       - type: from_entity
@@ -117,12 +117,12 @@ responses:
   - text: "Sure. May I have your name please?"
   - text: "Sure. Before that, what is your name?"
 
-  utter_ask_education:
+  utter_ask_qualification:
   - text: "What is your education background?"
   - text: "What is your academic experience?"
   - text: "Can you share your educational experience?"
 
-  utter_ask_profession:
+  utter_ask_title:
   - text: "What is your professional background?"
   - text: "What is your professional experience?"
   - text: "Can you share a fair bit of your professional background?"
@@ -176,8 +176,8 @@ forms:
   user_details_form:
     required_slots:
       - name
-      - education
-      - profession
+      - qualification
+      - title
       - skillset
 
 

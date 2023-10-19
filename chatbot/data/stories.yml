@@ -30,3 +30,65 @@ stories:
   steps:
   - intent: out_of_scope_resume
   - action: utter_out_of_scope
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_bot_intro
+  - intent: request_coverletter
+    entities:
+    - cv: cover letter
+  - action: utter_ask_name
+  - intent: provide_name
+    entities:
+    - name: Edson
+  - slot_was_set:
+    - name: Edson
+  - action: action_get_username
+  - intent: affirm
+  - action: action_process_user_form
+  - action: user_details_form
+  - active_loop: user_details_form
+  - slot_was_set:
+    - requested_slot: qualification
+  - intent: provide_education
+    entities:
+    - education: degree
+    - principle: Computer Science
+  - slot_was_set:
+    - qualification: degree
+  - slot_was_set:
+    - principle: Computer Science
+  - action: user_details_form
+  - slot_was_set:
+    - requested_slot: title
+  - intent: provide_profession
+    entities:
+    - profession: Senior
+    - profession: Software
+    - profession: Engineer
+  - slot_was_set:
+    - title: Engineer
+  - slot_was_set:
+    - seniority: Senior
+  - action: user_details_form
+  - slot_was_set:
+    - requested_slot: skillset
+  - intent: provide_skillset
+    entities:
+    - skillset: java
+    - skillset: python
+    - skillset: R
+  - slot_was_set:
+    - skillset:
+      - java
+      - python
+      - R
+  - action: user_details_form
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_submit_user_form
+  - action: utter_request_acknowledgement
+  - intent: affirm
+  - action: utter_appreciation

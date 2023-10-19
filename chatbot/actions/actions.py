@@ -103,12 +103,18 @@ class ActionSubmit(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         response = domain["responses"]["utter_collect_info"][0]
+        
+        # get required slots
         name = tracker.get_slot("name")
         qualification = tracker.get_slot("qualification")
         title = tracker.get_slot("title")
         skillset = tracker.get_slot("skillset")
         
-        response_text = response["text"].format(name=name, education=qualification, title=title, skillset=skillset) + "\n"
+        # get optional slot
+        principle = tracker.get_slot("principle")
+        seniority = tracker.get_slot("seniority")
+        
+        response_text = response["text"].format(name=name, qualification=qualification, title=title, skillset=skillset, principle=principle, seniority=seniority) + "\n"
         
         dispatcher.utter_message(text=response_text)
         

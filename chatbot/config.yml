@@ -24,24 +24,26 @@ pipeline:
   min_ngram: 1
   max_ngram: 4
 - name: DIETClassifier
-  entity_recognition: false
+  entity_recognition: False
   epochs: 100
-  constrain_similarities: true
+  constrain_similarities: True
 - name: CRFEntityExtractor
   "features": [
     ["low", "title", "upper"],
   ]
-  BILOU_flag: true
-- name: RegexEntityExtractor
-  case_sensitive: true
-  use_lookup_tables: true
-  use_regexes: true
+  BILOU_flag: True
+  split_entities_by_comma:
+    skillset: True
+# - name: RegexEntityExtractor
+#   case_sensitive: True
+#   use_lookup_tables: True
+#   use_regexes: True
 - name: EntitySynonymMapper
 # - name: SpacyNLP
 #   model: "en_core_web_md"
 - name: ResponseSelector
   epochs: 100
-  constrain_similarities: true
+  constrain_similarities: True
 - name: FallbackClassifier
   threshold: 0.3
   ambiguity_threshold: 0.1
@@ -61,4 +63,4 @@ policies:
 - name: TEDPolicy
   max_history: 5
   epochs: 100
-  constrain_similarities: true
+  constrain_similarities: True

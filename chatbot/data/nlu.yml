@@ -102,17 +102,22 @@ nlu:
 
 - intent: provide_education
   examples: |
-    - I have a [degree](education)
-    - I graduated from [university](education)
-    - I finished [Form 6](education)
-    - [phd](education)
-    - education: [High School](education)
+    - I have a [degree]{"entity":"education"} in [Computer Science]{"entity":"principle"}
+    - I graduated from [university]{"entity":"education"}
+    - I finished [Form 6]{"entity":"education"}
+    - [phd]{"entity":"education"}
+    - education: [High School]{"entity":"education"}
+    - I am a [Master Degree]{"entity":"education"} in [Software Engineering]{"entity":"principle"}
+    - I graducated in [Master]{"entity":"education"} for [Mathematics]{"entity":"principle"}
 
 - intent: provide_profession
   examples: |
     - I am a [Senior]{"entity":"profession", "role":"seniority"} [Engineer]{"entity":"profession", "role":"title"}
     - an [Engineer]{"entity":"profession", "role":"title"}
-    - I work as a [Staff]{"entity":"profession", "role":"seniority"} [Engineer]{"entity":"profession", "role":"title"}
+    - I work as a [Staff]{"entity":"profession", "role":"seniority"} [Business Analyst]{"entity":"profession", "role":"title"}
+    - title: [Data Scientist]{"entity":"profession", "role":"title"}, level: [Senior]{"entity":"profession", "role":"seniority"}
+    - profession: [Staff]{"entity":"profession", "role":"seniority"} [Data Engineer]{"entity":"profession", "role":"title"}
+    - [Senior Staff]{"entity":"profession", "role":"seniority"} [Software Engineer]{"entity":"profession", "role":"title"}
 
 - intent: provide_skillset
   examples: |
@@ -161,6 +166,11 @@ nlu:
     - cV
     - Cv
 
+- synonym: seniority
+  examples: |
+    - level
+    - grade
+    - designation
 
 ################################
 ### Regex
