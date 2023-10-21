@@ -5,18 +5,28 @@ version: "3.1"
 ################################
 intents:
   - greet
+  - request_coverletter:
+      use_entities:
+        - cv
+  - provide_name:
+      use_entities:
+        - name
   - greet_smalltalk
   - goodbye
   - bot_challenge
-  - provide_name
-  - request_coverletter
   - affirm
   - deny
   - not_sure
   - out_of_scope_resume
-  - provide_education
-  - provide_profession
-  - provide_skillset
+  - provide_education:
+      use_entities:
+        - education
+  - provide_profession:
+      use_entities:
+        - profession
+  - provide_skillset:
+      use_entities:
+        - skillset
 
 
 ################################
@@ -133,7 +143,7 @@ responses:
   - text: "Is everything good?"
   - text: "Is all information intact?"
 
-  utter_appreciation:
+  utter_appreciation_and_wait:
   - text: "Thank you for your confirmation. I will proceed with the submission. Please wait..."
   - text: "Appreciate your acknowledgement. Please stay tuned while I am generating the request..."
 
@@ -171,7 +181,7 @@ responses:
   - text: "I'm sorry, I didn't quite understand that. Could you rephrase?"
   - text: "Beg you pardon. Can you rephrase as I could not quite get your last response."
 
-  utter_express_attitude:
+  utter_express_gratitude:
   - text: "Thank you for using our service."
   - text: "Hope you enjoy our service."
 

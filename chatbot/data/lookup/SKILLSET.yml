@@ -21,3 +21,7 @@ nlu:
       - NoSQL
       - Redis Database
       - Redis
+      - Golang
+      - DotNet
+      - C++
+      - C

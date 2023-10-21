@@ -30,3 +30,71 @@ stories:
   steps:
   - intent: out_of_scope_resume
   - action: utter_out_of_scope
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_bot_intro
+  - intent: request_coverletter
+    entities:
+    - cv: cover letter
+  - action: utter_ask_name
+  - intent: provide_name
+    entities:
+    - name: John
+    - name: John
+  - slot_was_set:
+    - name: John
+  - action: action_ask_form_permission
+  - intent: affirm
+  - action: action_process_user_form
+  - action: user_details_form
+  - active_loop: user_details_form
+  - slot_was_set:
+    - requested_slot: qualification
+  - intent: provide_education
+    entities:
+    - education: degree
+    - principle: Mathematics
+    - education: degree
+    - principle: Mathematics
+  - slot_was_set:
+    - qualification: degree
+  - slot_was_set:
+    - principle: Mathematics
+  - action: user_details_form
+  - slot_was_set:
+    - requested_slot: title
+  - intent: provide_profession
+    entities:
+    - profession: Senior
+    - profession: Data Analyst
+    - profession: Data Analyst
+  - slot_was_set:
+    - title: Data Analyst
+  - slot_was_set:
+    - seniority: Senior
+  - action: user_details_form
+  - slot_was_set:
+    - requested_slot: skillset
+  - intent: provide_skillset
+    entities:
+    - skillset: java
+    - skillset: python
+    - skillset: Spring Boot
+    - skillset: Angular
+    - skillset: Spring Boot
+    - skillset: Angular
+  - slot_was_set:
+    - skillset:
+      - java
+      - python
+      - Spring Boot
+      - Angular
+  - action: user_details_form
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_submit_user_form
+  - intent: affirm
+  - action: action_generate_cover_letter

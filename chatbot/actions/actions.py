@@ -8,6 +8,7 @@
 # This is a simple example for a custom action which utters "Hello World!"
 
 import random
+import time
 from typing import Any, Dict, List, Text
 
 from llm import *
@@ -105,20 +106,20 @@ class ActionSubmit(Action):
         
         collect_into_messages = domain["responses"]["utter_collect_info"]
         acknowledgement_messages = domain["responses"]["utter_request_acknowledgement"]
-        response = collect_into_messages[random.randint(0, len(collect_into_messages) - 1)]
-        acknowledgement = acknowledgement_messages[random.randint(0, len(acknowledgement_messages)-1)]
+        response = collect_into_messages[random.randint(0, len(collect_into_messages) - 1)]["text"]
+        acknowledgement = acknowledgement_messages[random.randint(0, len(acknowledgement_messages)-1)]["text"]
         
         # get required slots
         name = tracker.get_slot("name")
         qualification = tracker.get_slot("qualification")
         title = tracker.get_slot("title")
-        skillset = tracker.get_slot("skillset")
+        skillset = list(dict.fromkeys(tracker.get_slot("skillset")))
         
         # get optional slot
         principle = tracker.get_slot("principle")
         seniority = tracker.get_slot("seniority")
         
-        response_text = response["text"].format(name=name, qualification=qualification, title=title, skillset=skillset, principle=principle, seniority=seniority) + acknowledgement["text"]
+        response_text = response.format(name=name, qualification=qualification, title=title, skillset=skillset, principle=principle, seniority=seniority) + acknowledgement
         
         dispatcher.utter_message(text=response_text)
         
@@ -145,21 +146,28 @@ class ActionGenerateCoverLetter(Action):
         
         # generate cover letter
         MODEL_NAME = "t5-base-fine-tune-1024"
-        input = prepare_input(user_name=name, job_title=seniority+" "+title, qualification=qualification+" "+principle, skillset=skillset)
+        input = prepare_input(user_name=name, current_working_experience=seniority+" "+title, qualification=qualification+" "+principle, skillset=skillset)
         letter = llm_model.generate_cover_letter(model_name=MODEL_NAME, input=input)
         
+        gratitude_messages = domain["responses"]["utter_express_gratitude"]
+        express_gratitude = gratitude_messages[random.randint(0, len(gratitude_messages)-1)]["text"]
         present_cv = "Here is the cover letter:\n"
         technical_error = "Sorry, seems like we encountered a technical error. Please try again later."
-        message = present_cv+letter if len(str(letter)) > 0 else technical_error
-        dispatcher.utter_message(text=message)
         
+        if (len(letter) > 0):
+            dispatcher.utter_message(present_cv+"\n"+letter+"\n")
+            time.sleep(1)
+            dispatcher.utter_message(express_gratitude)
+        else:
+            dispatcher.utter_message(technical_error)
+
         return []
         
 
-def prepare_input(user_name, job_title, qualification, skillset, preferred_qualification=None, hiring_company_name="ABC Company & Co", current_working_experience=None, past_working_experience=None):
+def prepare_input(user_name, current_working_experience, qualification, skillset, preferred_qualification=None, hiring_company_name="ABC Company & Co", job_title=None, past_working_experience=None):
     return {
         "user_name": user_name,
-        "job_title": job_title,
+        "job_title": current_working_experience, # job title is make up, match with current title
         "qualification": qualification,
         "skillset": skillset,
         "preferred_qualification": preferred_qualification,

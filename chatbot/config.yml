@@ -27,17 +27,31 @@ pipeline:
   entity_recognition: False
   epochs: 100
   constrain_similarities: true
-- name: CRFEntityExtractor
-  "features": [
-    ["low", "title", "upper"],
-  ]
-  BILOU_flag: true
-  split_entities_by_comma:
-    skillset: true
 - name: RegexEntityExtractor
   case_sensitive: true
   use_lookup_tables: true
   use_regexes: true
+- name: CRFEntityExtractor
+  "features": [
+    ["low", "title", "upper"],
+        [
+      "bias",
+      "low",
+      "prefix5",
+      "prefix2",
+      "suffix5",
+      "suffix3",
+      "suffix2",
+      "upper",
+      "title",
+      "digit",
+      "pattern",
+      "text_dense_features"
+    ]
+  ]
+  BILOU_flag: true
+  split_entities_by_comma:
+    skillset: true
 - name: EntitySynonymMapper
 # - name: SpacyNLP
 #   model: "en_core_web_md"

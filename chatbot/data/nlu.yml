@@ -93,22 +93,22 @@ nlu:
 
 - intent: provide_name
   examples: |
-    - my name is [Soon Hang]{"entity":"name"}
-    - name: [John]{"entity":"name"}
-    - [Nolan]{"entity":"name"}
-    - [Soon Hang]{"entity":"name"} here
-    - call me [John]{"entity":"name"}
-    - [Nolan]{"entity":"name"} is my name
+    - my name is [Soon Hang](name)
+    - name: [John](name)
+    - [Nolan](name)
+    - [Soon Hang](name) here
+    - call me [John](name)
+    - [Nolan](name) is my name
 
 - intent: provide_education
   examples: |
-    - I have a [degree]{"entity":"education"} in [Computer Science]{"entity":"principle"}
-    - I graduated from [university]{"entity":"education"}
-    - I finished [Form 6]{"entity":"education"}
-    - [phd]{"entity":"education"}
-    - education: [High School]{"entity":"education"}
-    - I am a [Master Degree]{"entity":"education"} in [Software Engineering]{"entity":"principle"}
-    - I graducated in [Master]{"entity":"education"} for [Mathematics]{"entity":"principle"}
+    - I have a [degree](education) in [Computer Science](principle)
+    - I graduated from [university](education)
+    - I finished [Form 6](education)
+    - [phd](education)
+    - education: [High School](education)
+    - I am a [Master Degree](education) in [Software Engineering](principle)
+    - I graducated in [Master](education) for [Mathematics](principle)
 
 - intent: provide_profession
   examples: |
@@ -122,7 +122,7 @@ nlu:
 - intent: provide_skillset
   examples: |
     - [python]{"entity":"skillset"}, [R]{"entity":"skillset"}, [java]{"entity":"skillset"}
-    - [leadership]{"entity":"skillset"}, [code review]{"entity":"skillset"}
+    - [leadership]{"entity":"skillset"}, [code review]{"entity":"skillset"}, [Spring Boot]{"entity":"skillset"}
 
 - intent: request_coverletter
   examples: |
@@ -132,7 +132,7 @@ nlu:
     - compose a [Cv]{"entity":"cv"} for job application
     - need a [coverpage]{"entity":"cv"} for a job
     - [coverletter]{"entity":"cv"}
-    - a [cv]{"entity":"cv"} please
+    - a [application letter]{"entity":"cv"} please
 
 - intent: out_of_scope_resume
   examples: |
@@ -181,10 +181,18 @@ nlu:
   examples: |
     - [John](name) here
 
-- regex: \[(\w+)\]\(cv\)
+- regex: \[(\w+)\]\{\"entity\"\:\"cv\"\}
   examples: |
-    - write a [cover letter](cv) please
+    - write a [cover letter]{"entity":"cv"} please
 
-- regex: \[(\w+)\]\(skillset\)
+- regex: \[(\w+)\]\{\"entity\"\:\"skillset\"\}
   examples: |
-    - [Python](skillset), [Spring Boot](skillset), [Java](skillset)
+    - [Python]{"entity":"skillset"}, [Spring Boot]{"entity":"skillset"}, [Java]{"entity":"skillset"}
+
+- regex: \[(\w+)\]\(education\)
+  examples: |
+    - I have a [degree](education) in Computer Science
+
+- regex: \[(\w+)\]\(principle\)
+  examples: |
+    - Master in [Computer Science](principle)

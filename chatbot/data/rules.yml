@@ -7,21 +7,6 @@ rules:
     - intent: bot_challenge
     - action: utter_iamabot
 
-- rule: response to affirmation for form activation
-  steps:
-    - intent: affirm
-    - action: action_process_user_form
-    - action: user_details_form
-    - active_loop: user_details_form
-
-- rule: response to denial for form activation
-  condition:
-    - active_loop: user_details_form
-  steps:
-    - intent: deny
-    - action: utter_respond_denial
-    - action: utter_goodbye
-
 - rule: Submit user form - Happy Path
   condition:
     - active_loop: user_details_form
@@ -32,7 +17,8 @@ rules:
       - requested_slot: null
     - action: action_submit_user_form
     - intent: affirm
-    - action: utter_appreciation
+    - action: utter_appreciation_and_wait
+    - action: action_generate_cover_letter
 
 - rule: Submit user form - Sad Path
   condition:
@@ -47,11 +33,20 @@ rules:
     - action: utter_respond_denial
     - action: utter_goodbye
 
-- rule: generate cover letter success
+- rule: response to affirmation for form activation
   steps:
-    - action: utter_appreciation
-    - action: action_generate_cover_letter
-    - action: utter_express_attitude
+    - intent: affirm
+    - action: action_process_user_form
+    - action: user_details_form
+    - active_loop: user_details_form
+
+- rule: response to denial for form activation
+  condition:
+    - active_loop: user_details_form
+  steps:
+    - intent: deny
+    - action: utter_respond_denial
+    - action: utter_goodbye
 
 - rule: ask user to rephrase whenever NLU confidence level is low
   steps:
