@@ -15,3 +15,6 @@
 7. domain.yml: assistant's domain (define how the bot should act & respond)
 8. endpoints.yml: details for conncting to channels like fb messenger
 9. models/<timestamp>.tar.gz: initial model
+
+# RASA will throw Exception "BlockingIOError" when running rasa interactive learning
+1. use pip uninstall uvloop

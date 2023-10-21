@@ -13,7 +13,8 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 import random
-
+from llm import *
+from llm import main as llm_model
 
 class ActionGetName(Action):
 
@@ -120,4 +121,46 @@ class ActionSubmit(Action):
         dispatcher.utter_message(text=response_text)
         
         return []
+    
+class ActionGenerateCoverLetter(Action):
+    
+    def name(self) -> Text:
+        return "action_generate_cover_letter"
+    
+    async def run(self, dispatcher: CollectingDispatcher,
+                  tracker: Tracker,
+                  domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+                # get required slots
+        name = tracker.get_slot("name")
+        qualification = tracker.get_slot("qualification")
+        title = tracker.get_slot("title")
+        skillset = tracker.get_slot("skillset")
+        
+        # get optional slot
+        principle = tracker.get_slot("principle") if tracker.get_slot("principle") is not None else ""
+        seniority = tracker.get_slot("seniority") if tracker.get_slot("seniority") is not None else ""
+        
+        # generate cover letter
+        MODEL_NAME = "t5-base-fine-tune-1024"
+        input = prepare_input(user_name=name, job_title=seniority+" "+title, qualification=qualification+" "+principle, skillset=skillset)
+        letter = llm_model.generate_cover_letter(input, MODEL_NAME)
+        
+        dispatcher.utter_message(text=letter)
+        
+        return []
+        
+    
+@staticmethod
+def prepare_input(user_name, job_title, qualification, skillset, past_working_experience, preferred_qualification=None, hiring_company_name="ABC Company & Co", current_working_experience=None):
+    return {
+        "user_name": user_name,
+        "job_title": job_title,
+        "qualification": qualification,
+        "skillset": skillset,
+        "preferred_qualification": preferred_qualification,
+        "hiring_company_name": hiring_company_name,
+        "past_working_experience": past_working_experience,
+        "current_working_experience": current_working_experience
+    }
 

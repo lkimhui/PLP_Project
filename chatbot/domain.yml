@@ -35,8 +35,6 @@ entities:
 
 ################################
 ### Slots
-# to add role for education: subject and level
-# to add role for profession: title and level
 ################################
 slots:
   name:
@@ -194,6 +192,7 @@ actions:
   - action_get_username
   - action_process_user_form
   - action_submit_user_form
+  - action_generate_cover_letter
 
 
 session_config:

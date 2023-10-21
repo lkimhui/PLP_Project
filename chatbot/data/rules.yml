@@ -25,6 +25,7 @@ rules:
     - action: action_submit_user_form
     - intent: affirm
     - action: utter_appreciation
+    - action: action_generate_cover_letter
 
 - rule: response to denial
   condition:
