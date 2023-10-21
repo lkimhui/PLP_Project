@@ -1,0 +1,11 @@
+# needed to run fine-tuned llm model
+transformers
+torch
+evaluate
+sentencepiece
+matplotlib
+pandas
+rasa
+
+## uncomment below if need to run rasa interactive learning
+# pip uninstall uvloop

@@ -26,24 +26,24 @@ pipeline:
 - name: DIETClassifier
   entity_recognition: False
   epochs: 100
-  constrain_similarities: True
+  constrain_similarities: true
 - name: CRFEntityExtractor
   "features": [
     ["low", "title", "upper"],
   ]
-  BILOU_flag: True
+  BILOU_flag: true
   split_entities_by_comma:
-    skillset: True
-# - name: RegexEntityExtractor
-#   case_sensitive: True
-#   use_lookup_tables: True
-#   use_regexes: True
+    skillset: true
+- name: RegexEntityExtractor
+  case_sensitive: true
+  use_lookup_tables: true
+  use_regexes: true
 - name: EntitySynonymMapper
 # - name: SpacyNLP
 #   model: "en_core_web_md"
 - name: ResponseSelector
   epochs: 100
-  constrain_similarities: True
+  constrain_similarities: true
 - name: FallbackClassifier
   threshold: 0.3
   ambiguity_threshold: 0.1
@@ -55,7 +55,7 @@ policies:
 - name: RulePolicy
   core_fallback_threshold: 0.3
   core_fallback_action_name: "action_default_fallback"
-  enable_fallback_prediction: True
+  enable_fallback_prediction: true
 # - name: UnexpecTEDIntentPolicy
 #   max_history: 5
 #   epochs: 100
@@ -63,4 +63,4 @@ policies:
 - name: TEDPolicy
   max_history: 5
   epochs: 100
-  constrain_similarities: True
+  constrain_similarities: true

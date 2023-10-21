@@ -12,7 +12,7 @@ stories:
     entities:
       - name: John
       - name: Soon Hang
-  - action: action_get_username
+  - action: action_ask_form_permission
 
 - story: small chat with affirmation
   steps:
@@ -24,7 +24,7 @@ stories:
     entities:
       - name: John
       - name: Soon Hang
-  - action: action_get_username
+  - action: action_ask_form_permission
 
 - story: handle_out_of_scope
   steps:

@@ -18,3 +18,8 @@
 
 # RASA will throw Exception "BlockingIOError" when running rasa interactive learning
 1. use pip uninstall uvloop
+
+# Entity Recognition
+1. name: capital case, single word name
+2. skillset: capital case
+3. title: capital case

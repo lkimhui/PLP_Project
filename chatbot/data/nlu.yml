@@ -131,6 +131,8 @@ nlu:
     - compose a [CV]{"entity":"cv"} for company
     - compose a [Cv]{"entity":"cv"} for job application
     - need a [coverpage]{"entity":"cv"} for a job
+    - [coverletter]{"entity":"cv"}
+    - a [cv]{"entity":"cv"} please
 
 - intent: out_of_scope_resume
   examples: |
@@ -182,3 +184,7 @@ nlu:
 - regex: \[(\w+)\]\(cv\)
   examples: |
     - write a [cover letter](cv) please
+
+- regex: \[(\w+)\]\(skillset\)
+  examples: |
+    - [Python](skillset), [Spring Boot](skillset), [Java](skillset)

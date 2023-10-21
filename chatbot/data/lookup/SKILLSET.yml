@@ -1,0 +1,23 @@
+version: "3.1"
+nlu:
+  - lookup: skillset
+    examples: |
+      - Python
+      - R
+      - Java
+      - SpringBoot
+      - Spring Boot
+      - React
+      - Angular
+      - SQL
+      - PostgreSQL
+      - Oracle SQL
+      - MongoDB
+      - Algorithm
+      - Data Structure
+      - Data Analysis
+      - PySpark
+      - Hadoop
+      - NoSQL
+      - Redis Database
+      - Redis

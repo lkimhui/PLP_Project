@@ -89,8 +89,7 @@ slots:
 responses:
   utter_goodbye:
   - text: "See you next time then. Bye~"
-  - text: "Hope to serve you next time. Bye~"
-  - text: "Great to talk to you thus far. See ya."
+  - text: "Great to talk to you thus far. See ya~"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
@@ -122,9 +121,9 @@ responses:
   - text: "Can you share your educational experience?"
 
   utter_ask_title:
-  - text: "What is your professional background?"
-  - text: "What is your professional experience?"
-  - text: "Can you share a fair bit of your professional background?"
+  - text: "What is your current professional background?"
+  - text: "What is your current professional experience?"
+  - text: "Can you share your current professional background?"
 
   utter_ask_skillset:
   - text: "Any specific skillset of yours to highlight?"
@@ -135,7 +134,7 @@ responses:
   - text: "Is all information intact?"
 
   utter_appreciation:
-  - text: "Thank you for your confirmation. I will proceed with the submission."
+  - text: "Thank you for your confirmation. I will proceed with the submission. Please wait..."
   - text: "Appreciate your acknowledgement. Please stay tuned while I am generating the request..."
 
   utter_respond_denial:
@@ -172,6 +171,18 @@ responses:
   - text: "I'm sorry, I didn't quite understand that. Could you rephrase?"
   - text: "Beg you pardon. Can you rephrase as I could not quite get your last response."
 
+  utter_express_attitude:
+  - text: "Thank you for using our service."
+  - text: "Hope you enjoy our service."
+
+  utter_ask_fallback_user_form:
+  - text: "Do you want to resubmit the form?"
+  - text: "Shall we restart the form submission?"
+
+  utter_ask_proceed_to_submit:
+  - text: "Shall we reattempt the submission?"
+  - text: "Do you mind to wait while we attempt to resolve the issue?"
+
 
 ################################
 ### Forms
@@ -189,7 +200,7 @@ forms:
 ### Actions
 ################################
 actions:
-  - action_get_username
+  - action_ask_form_permission
   - action_process_user_form
   - action_submit_user_form
   - action_generate_cover_letter

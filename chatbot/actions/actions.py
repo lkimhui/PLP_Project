@@ -7,26 +7,26 @@
 
 # This is a simple example for a custom action which utters "Hello World!"
 
-from typing import Any, Text, Dict, List
-
-from rasa_sdk import Action, Tracker
-from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import SlotSet
 import random
+from typing import Any, Dict, List, Text
+
 from llm import *
-from llm import main as llm_model
+from llm import prediction as llm_model
+from rasa_sdk import Action, Tracker
+from rasa_sdk.events import SlotSet
+from rasa_sdk.executor import CollectingDispatcher
+
 
 class ActionGetName(Action):
 
     def name(self) -> Text:
-        return "action_get_username"
+        return "action_ask_form_permission"
 
     async def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         name = next(tracker.get_latest_entity_values("name"), None)
-        print(f">>>>> name: {name}")
         
         # send message to greet user based on name
         # meanwhile request for user's acknowledgement
@@ -103,8 +103,10 @@ class ActionSubmit(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
-        response = domain["responses"]["utter_collect_info"][0]
-        acknowledgement = domain["responses"]["utter_request_acknowledgement"][0]
+        collect_into_messages = domain["responses"]["utter_collect_info"]
+        acknowledgement_messages = domain["responses"]["utter_request_acknowledgement"]
+        response = collect_into_messages[random.randint(0, len(collect_into_messages) - 1)]
+        acknowledgement = acknowledgement_messages[random.randint(0, len(acknowledgement_messages)-1)]
         
         # get required slots
         name = tracker.get_slot("name")
@@ -131,7 +133,7 @@ class ActionGenerateCoverLetter(Action):
                   tracker: Tracker,
                   domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
-                # get required slots
+        # get required slots
         name = tracker.get_slot("name")
         qualification = tracker.get_slot("qualification")
         title = tracker.get_slot("title")
@@ -144,15 +146,17 @@ class ActionGenerateCoverLetter(Action):
         # generate cover letter
         MODEL_NAME = "t5-base-fine-tune-1024"
         input = prepare_input(user_name=name, job_title=seniority+" "+title, qualification=qualification+" "+principle, skillset=skillset)
-        letter = llm_model.generate_cover_letter(input, MODEL_NAME)
+        letter = llm_model.generate_cover_letter(model_name=MODEL_NAME, input=input)
         
-        dispatcher.utter_message(text=letter)
+        present_cv = "Here is the cover letter:\n"
+        technical_error = "Sorry, seems like we encountered a technical error. Please try again later."
+        message = present_cv+letter if len(str(letter)) > 0 else technical_error
+        dispatcher.utter_message(text=message)
         
         return []
         
-    
-@staticmethod
-def prepare_input(user_name, job_title, qualification, skillset, past_working_experience, preferred_qualification=None, hiring_company_name="ABC Company & Co", current_working_experience=None):
+
+def prepare_input(user_name, job_title, qualification, skillset, preferred_qualification=None, hiring_company_name="ABC Company & Co", current_working_experience=None, past_working_experience=None):
     return {
         "user_name": user_name,
         "job_title": job_title,
