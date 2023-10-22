@@ -82,9 +82,10 @@
 	</script>
 	```
 
-<a href="https://github.com/lkimhui/PLP_Project/tree/users/soonhang/chatbot">
+<div align="center">
 <img align="center" src="https://github.com/lkimhui/PLP_Project/edit/users/soonhang/chatbot/AppFrontPage.gif" alt="demonstration" width="100%">
-</a>
+</div>
+<br />
 
 2. Slack
     - register ngrok account and get the auth token
