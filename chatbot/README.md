@@ -47,11 +47,6 @@
     - create a .html page within the same folder
     - paste below script within html body
 
-## Usage
-
-### In a `<script>` tag
-
-In your `<body/>`:
 ```html
 <script>!(function () {
   let e = document.createElement("script"),
