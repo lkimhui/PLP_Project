@@ -46,34 +46,35 @@
 1. Web HTML with Chat Widget
     - create a .html page within the same folder
     - paste below script within html body
-	<script>!(function () {
-            let e = document.createElement("script"),
-              t = document.head || document.getElementsByTagName("head")[0];
-            (e.src =
-              "https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.js"),
-              // Replace 1.x.x with the version that you want
-              (e.async = !0),
-              (e.onload = () => {
-                window.WebChat.default(
-                  {
-                    initPayload: '/greet',
-                    customData: { language: "en" },
-                    socketUrl: "http://localhost:5005",
-                    title: 'Cover Letter Generator',
-                    subtitle: 'Ease the process of Cover Letter generation',
-                    embedded: true,
-                    showMessageDate: true
-                    //storage: "local"
-                    //socketPath: "/socket.io/"
-                    // add other props here
-                  },
-                  null
-                );                
-              }),
-              t.insertBefore(e, t.firstChild);
-              window.localStorage.clear()
-          })();
-          </script>
+
+## Usage
+
+### In a `<script>` tag
+
+In your `<body/>`:
+```html
+<script>!(function () {
+  let e = document.createElement("script"),
+    t = document.head || document.getElementsByTagName("head")[0];
+  (e.src =
+    "https://cdn.jsdelivr.net/npm/rasa-webchat@1.x.x/lib/index.js"),
+    // Replace 1.x.x with the version that you want
+    (e.async = !0),
+    (e.onload = () => {
+      window.WebChat.default(
+        {
+          customData: { language: "en" },
+          socketUrl: "https://bf-botfront.development.agents.botfront.cloud",
+          // add other props here
+        },
+        null
+      );
+    }),
+    t.insertBefore(e, t.firstChild);
+})();
+</script>
+```
+
     - on cmd line, run:
         rasa run --port <port> --models --enable-api --cors "*"
     - launch a new terminal, on cmd line, run:
