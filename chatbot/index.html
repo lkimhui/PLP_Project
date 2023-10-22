@@ -12,7 +12,7 @@
             (e.onload = () => {
               window.WebChat.default(
                 {
-                  initPayload: '/chat',
+                  initPayload: '/greet',
                   customData: { language: "en" },
                   socketUrl: "http://localhost:5005",
                   title: 'Chat with GenRes!',
@@ -24,7 +24,7 @@
               );                
             }),
             t.insertBefore(e, t.firstChild);
-            window.localStorage.clear()
+            // window.localStorage.clear()
         })();
       </script>
   </body>

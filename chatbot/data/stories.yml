@@ -13,6 +13,14 @@ stories:
       - name: John
       - name: Soon Hang
   - action: action_ask_form_permission
+  - action: user_details_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_submit_user_form
+  - intent: affirm
+  - action: utter_appreciation_and_wait
+  - action: action_generate_cover_letter
 
 - story: small chat with affirmation
   steps:
@@ -25,6 +33,14 @@ stories:
       - name: John
       - name: Soon Hang
   - action: action_ask_form_permission
+  - action: user_details_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_submit_user_form
+  - intent: affirm
+  - action: utter_appreciation_and_wait
+  - action: action_generate_cover_letter
 
 - story: handle_out_of_scope
   steps:
