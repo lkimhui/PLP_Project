@@ -23,3 +23,18 @@
 1. name: capital case, single word name
 2. skillset: capital case
 3. title: capital case
+
+# Enable website integration
+1. inside credential.yml, uncomment socketio
+
+# Integration
+1. Slack
+    - register ngrok account and get the auth token
+    - install ngrok on local machine based on your OS system
+    - on cmd line, run: 
+        ngrok config add-authtoken <your_ngrok_token>
+    - on cmd line, run: 
+        rasa run --port <port> --models --enable-api --cors "*"
+    - on another cmd line, run: 
+        ngrok http <port>
+    - 

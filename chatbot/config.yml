@@ -47,7 +47,8 @@ pipeline:
       "digit",
       "pattern",
       "text_dense_features"
-    ]
+    ],
+    ["low", "title", "upper"],
   ]
   BILOU_flag: true
   split_entities_by_comma:

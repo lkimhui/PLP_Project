@@ -138,7 +138,7 @@ class ActionGenerateCoverLetter(Action):
         name = tracker.get_slot("name")
         qualification = tracker.get_slot("qualification")
         title = tracker.get_slot("title")
-        skillset = tracker.get_slot("skillset")
+        skillset = list(dict.fromkeys(tracker.get_slot("skillset")))
         
         # get optional slot
         principle = tracker.get_slot("principle") if tracker.get_slot("principle") is not None else ""
