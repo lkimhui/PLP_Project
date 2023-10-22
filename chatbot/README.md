@@ -1,5 +1,5 @@
 <div align="center">
-<img align="center" src="./AppFrontPage.gif" alt="demonstration" width="100%">
+<img align="center" src="./resources/templates/AppFrontPage.gif" alt="demonstration" width="100%">
 </div>
 <br />
 
