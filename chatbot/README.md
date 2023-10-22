@@ -46,6 +46,14 @@
 1. Web HTML with Chat Widget
     - create a .html page within the same folder
     - paste below script within html body
+    - on cmd line, run:
+	```bash
+	rasa run --port <port> --models --enable-api --cors "*"
+	```
+    - launch a new terminal, on cmd line, run:
+	``bash
+	rasa run actions
+	```
 
 ```html
 <script>!(function () {
@@ -70,10 +78,6 @@
 </script>
 ```
 
-    - on cmd line, run:
-        rasa run --port <port> --models --enable-api --cors "*"
-    - launch a new terminal, on cmd line, run:
-	rasa run actions
 
 2. Slack
     - register ngrok account and get the auth token
