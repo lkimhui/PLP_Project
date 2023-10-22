@@ -1,3 +1,8 @@
+<div align="center">
+<img align="center" src="./AppFrontPage.gif" alt="demonstration" width="100%">
+</div>
+<br />
+
 # RASA installation
 1. Currently RASA only supported by python3.4-3.9 due to bug found in abseil-py (sub-module in RASA)
 2. Downgrade python version whenever necessary
@@ -81,11 +86,6 @@
 	})();
 	</script>
 	```
-
-<div align="center">
-<img align="center" src="./AppFrontPage.gif" alt="demonstration" width="100%">
-</div>
-<br />
 
 2. Slack
     - register ngrok account and get the auth token
