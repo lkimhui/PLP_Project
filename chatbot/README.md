@@ -83,7 +83,7 @@
 	```
 
 <div align="center">
-<img align="center" src="https://github.com/lkimhui/PLP_Project/edit/users/soonhang/chatbot/AppFrontPage.gif" alt="demonstration" width="100%">
+<img align="center" src="./AppFrontPage.gif" alt="demonstration" width="100%">
 </div>
 <br />
 
