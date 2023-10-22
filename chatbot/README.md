@@ -33,14 +33,13 @@
 	example: 	action_endpoint:
 			  url: "http://localhost:5055/webhook"
 
-3. inside credential.yml, uncomment socketio
-4. then fill up user_message_evt with user_uttered
-5. and fill up bot_message_evt with bot_uttered
-6. finally change session_persistence to true
-	example: 	socketio:
-			  user_message_evt: user_uttered
-			  bot_message_evt: bot_uttered
-			  session_persistence: true
+3. inside credential.yml, uncomment socketio and filled up as per below:
+	'''yml
+	socketio:
+	  user_message_evt: user_uttered
+	  bot_message_evt: bot_uttered
+	  session_persistence: true
+	'''
 
 # Integration
 1. Web HTML with Chat Widget
