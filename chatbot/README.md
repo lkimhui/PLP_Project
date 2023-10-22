@@ -26,20 +26,24 @@
 
 # Enable integration
 1. inside config.yml, add action_endpoints: with webhook url socket address
-	example: 	action_endpoint:
-  			  url: "http://localhost:5055/webhook"
+	```yml
+	action_endpoint:
+  	  url: "http://localhost:5055/webhook"
+	```
 
 2. inside endpoints.yml, uncomment action_endpoint to enable custom action response
-	example: 	action_endpoint:
-			  url: "http://localhost:5055/webhook"
+	```yml
+	action_endpoint:
+	  url: "http://localhost:5055/webhook"
+	```
 
 3. inside credential.yml, uncomment socketio and filled up as per below:
-	'''yml
+	```yml
 	socketio:
 	  user_message_evt: user_uttered
 	  bot_message_evt: bot_uttered
 	  session_persistence: true
-	'''
+	```
 
 # Integration
 1. Web HTML with Chat Widget
@@ -47,7 +51,7 @@
     - paste below script within html body
     - on cmd line, run:
 	```bash
-	rasa run --port <port> --models --enable-api --cors "*"
+	rasa run -m models --enable-api --cors "*"
 	```
     - launch a new terminal, on cmd line, run:
 	```bash
@@ -88,4 +92,3 @@
         rasa run --port <port> --models --enable-api --cors "*"
     - on another cmd line, run: 
         ngrok http <port>
-    - 
