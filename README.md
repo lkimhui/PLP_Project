@@ -67,6 +67,7 @@
     * education: user's level for educational background
     * principle: user's principle for educational background
 3. Dialog Policy
+    <br/>
     <div align="center">
     <img align="center" src="./chatbot/resources/templates/DialogPolicy.png" alt="demonstration" width="75%">
     </div>
@@ -155,6 +156,7 @@
     - register a [ngrok account](https://dashboard.ngrok.com/login)
     - login your ngrok account after successful registration
     - copy your auth token and save it to a secured document or folder
+        <br/>
         <div align="center">
         <img align="center" src="./chatbot/resources/templates/ngrok_auth_token.png" alt="demonstration" width="75%">
         </div>
@@ -212,6 +214,7 @@
             ngrok http <port>
             ```
         - on successful execution, you shall see below:
+            <br/>
             <div align="center">
             <img align="center" src="./chatbot/resources/templates/ngrok_execution.png" alt="demonstration" width="75%">
             </div>
@@ -227,6 +230,7 @@
                 * message:im
                 * message:mpim
     - now, go back to your Slack workspace, you shall see the Chatbot App added to your `Apps` list
+        <br/>
         <div align="center">
         <img align="center" src="./chatbot/resources/templates/SlackImplementation.png" alt="demonstration" width="75%">
         </div>
