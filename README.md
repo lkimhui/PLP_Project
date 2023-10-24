@@ -96,19 +96,37 @@
 4. Ensure the existence of chatbot folder
 
 ### Enable Integration : Open-group / Public
-1. inside config.yml, add action_endpoints: with webhook url socket address
+1. Create a Ngrok Account to bridge the Chatting Platform
+    - register a [ngrok account](https://dashboard.ngrok.com/login)
+    - login your ngrok account after successful registration
+    - copy your auth token and save it to a secured document or folder
+        <br/>
+        <div align="center">
+        <img align="center" src="./chatbot/resources/templates/ngrok_auth_token.png" alt="demonstration" width="75%">
+        </div>
+        <br/>
+    - install ngrok on local machine based on your OS system
+    - test your ngrok setup by following below:
+        - on your chatbot cmd / terminal, run: 
+            rasa run --port `<port>` -m models --enable-api --cors "*"
+        - open a new cmd / terminal, run: 
+            ngrok config add-authtoken `<your_ngrok_token>`
+        - on the new cmd line, run: 
+            ngrok http `<port>`
+
+2. inside config.yml, add action_endpoints: with webhook url socket address
 	```yml
 	action_endpoint:
-  	  url: "http://localhost:5055/webhook"
+  	  url: "http `<port>` /webhook"
 	```
 
-2. inside endpoints.yml, uncomment action_endpoint to enable custom action response
+3. inside endpoints.yml, uncomment action_endpoint to enable custom action response
 	```yml
 	action_endpoint:
-	  url: "http://localhost:5055/webhook"
+	  url: "http `<port>` /webhook"
 	```
 
-3. inside credential.yml, uncomment socketio and filled up as per below:
+4. inside credential.yml, uncomment socketio and filled up as per below:
 	```yml
 	socketio:
 	  user_message_evt: user_uttered
@@ -116,40 +134,50 @@
 	  session_persistence: true
 	```
 
-4. Web HTML with Chat Widget
+5. Web HTML with Chat Widget
     - create a .html page within the same folder if index.html could not be found
     - paste below script within html body
 	In your `<body/>`:
 	```html
 	<script>!(function () {
-	  let e = document.createElement("script"),
-	    t = document.head || document.getElementsByTagName("head")[0];
-	  (e.src =
-	    "https://cdn.jsdelivr.net/npm/rasa-webchat@1.x.x/lib/index.js"),
-	    // Replace 1.x.x with the version that you want
-	    (e.async = !0),
-	    (e.onload = () => {
-	      window.WebChat.default(
-	        {
-	          customData: { language: "en" },
-	          socketUrl: "https://bf-botfront.development.agents.botfront.cloud",
-	          // add other props here
-	        },
-	        null
-	      );
-	    }),
-	    t.insertBefore(e, t.firstChild);
-	})();
-	</script>
+            let e = document.createElement("script"),
+              t = document.head || document.getElementsByTagName("head")[0];
+            (e.src =
+              "https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.js"),
+              // Replace 1.x.x with the version that you want
+              (e.async = !0),
+              (e.onload = () => {
+                window.WebChat.default(
+                  {
+                    initPayload: '/greet',
+                    customData: { language: "en" },
+                    socketUrl: "http <port>",
+                    title: 'Cover Letter Generator',
+                    subtitle: 'Ease the process of Cover Letter generation',
+                    embedded: true,
+                    showMessageDate: true
+                  },
+                  null
+                );                
+              }),
+              t.insertBefore(e, t.firstChild);
+              window.localStorage.clear()
+          })();
+          </script>
 	```
-    - on cmd line, run:
-	```bash
-	rasa run -m models --enable-api --cors "*"
-	```
-    - launch a new terminal, on cmd line, run:
-	```bash
-	rasa run actions
-	```
+    - in cmd / terminal, launch the rasa actions server
+        ```bash
+        rasa run actions
+        ```
+    - on another new cmd / terminal, launch the rasa server
+        ```bash
+        rasa run --port <port> --credentials credentials.yml --endpoints endpoints.yml -m models --enable-api --cors "*"
+        ```
+    - then, start ngrok on the rasa server port
+        ```bash
+        ngrok http <port>
+        ```
+    - launch the index.html web page
 
 #### Enable Integration : Closed-group / Private
 1. Create a Ngrok Account to bridge the Chatting Platform
