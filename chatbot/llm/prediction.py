@@ -1,4 +1,4 @@
-from llm.model_helper import call_t5_base_fine_tune_512
+from chatbot.llm.model_helper import call_t5_base_fine_tune_512
 
 
 def generate_cover_letter(model_name, input):

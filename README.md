@@ -178,16 +178,16 @@
         - navigate to `Your apps`
         - hit the `Create New App` button
         - navigate to `Basic Information` section, fill up the basic information as instructed
-        - Once filled up Basic Information, navigate to `OAuth & Permission`
-            - add below to `Bot Token Scopes`
-                * chat:write
-                * im:read
-                * im:write
-                * im:history
-                * mpim:history
+        - once filled up Basic Information, navigate to `OAuth & Permission`
+        - add below to `Bot Token Scopes`
+            * chat:write
+            * im:read
+            * im:write
+            * im:history
+            * mpim:history
         - Scroll up and click `Install App`
-            - a pop-up window will appear to ask for permissions on your workspace
-            - go ahead and click `Allow`
+            * a pop-up window will appear to ask for permissions on your workspace
+            * go ahead and click `Allow`
     - now you need the KEY to connect
         - navigate to `OAuth & Permissions`
         - under `Token for Your Workspace`, you shall see an Access Token start with `xoxb-`
@@ -201,15 +201,15 @@
             ```
         - update the command lines accordingly
     - lastly, we need both rasa actions, ngrok and rasa shell to be running together
-        - firstly, launch your rasa actions server as shown below
+        - launch your rasa actions server as shown below
             ```bash
             rasa run actions
             ```
-        - secondly, on another cmd / terminal, launch your rasa server as shown below
+        - on another cmd / terminal, launch your rasa server as shown below
             ```bash
             rasa run --port <port> -- connector slack --credentials credentials.yml --endpoints endpoints.yml -m models --enable-api --cors "*"
             ```
-        - then, start ngrok on the rasa server port
+        - start ngrok on the rasa server port
             ```bash
             ngrok http <port>
             ```
@@ -235,3 +235,50 @@
         <img align="center" src="./chatbot/resources/templates/SlackImplementation.png" alt="demonstration" width="75%">
         </div>
         <br/>
+
+## Prompt LLM Model
+For first-hand experience with our fine-tuned LLM model, please follow instructions below to prompt the T5 model:
+1. after git clone this project, cd to chatbot folder
+2. currently, our T5 model can take in these inputs:
+    ```
+    user_name
+    job_title
+    qualification
+    skillset
+    past_working_experience
+    preferred_qualification
+    hiring_company_name
+    current_working_experience
+    ```
+3. ensure below mentioned python files exist in `<llm>` folder
+    * main.py
+    * prediction.py
+    * model_helper.py
+3. to test the llm model response, run below python cmd
+    ```bash
+    python -m main
+    ```
+4. to use the module, import the packages as shown below
+    ```
+    from chatbot.llm import *
+    from chatbot.llm import main as llm
+    ```
+    note `<chatbot>` is the main folder name and editable
+5. in your own python script, create your input as illustrated below:
+    ```json
+    {
+        "user_name": "your_name",
+        "qualification": "your_qualification",
+        "skillset": "your_skillset",
+        "current_working_experience": "your_current_working_experience",
+        "past_working_experience": "your_past_working_experience",
+        "preferred_qualification": "hiring_company_preferred_qualification",
+        "hiring_company_name": "hiring_company_name",
+        "job_title": "hiring_company_job_title"
+    }
+    ```
+6. set model_name as `t5-base-fine-tune-1024`
+7. print below python code to console for text generation
+    ```python
+    llm.generate_cover_letter(input=input, model_name=model_name)
+    ```
