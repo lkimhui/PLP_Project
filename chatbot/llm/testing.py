@@ -1,5 +1,5 @@
-from chatbot.llm import *
-from chatbot.llm import main as llm
+# from llm import *
+import main as llm
 
 def prepare_input(user_name, job_title, qualification, skillset, past_working_experience, preferred_qualification=None, hiring_company_name="ABC Company & Co", current_working_experience=None):
     return {

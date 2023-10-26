@@ -4,18 +4,18 @@
 <br />
 
 # User Guide for ChatGRes
-    * This user guide aims to provide two objectives:
-        * a technical overview of the technology stacks in place for the chatbot development
-        * a simple and intuitive set of instructions to install and interact with the GenRes CUI
-    * By reading this document, user would understand the expected behaviour of the virtual assistant from both technical and functional aspects
+* This user guide aims to provide two objectives:
+    1. a technical overview of the technology stacks in place for the chatbot development
+    2. a simple and intuitive set of instructions to install and interact with the GenRes CUI
+* By reading this document, user would understand the expected behaviour of the virtual assistant from both technical and functional aspects
 
 ## Technical Design of GenRes CUI
 
 ### Understand Main Framework:
-    * This CUI adopts Open Source RASA framework due to its strong supporting community group and extensibility across closed-group and open-group implementation
-    * This CUI utilises RASA core to navigate through various expected scenarios during user interaction and execute pre-defined events for exception handling
-    * This CUI utilises RASA nlu to perform two main tasks while interacting with main users, namely: Intent Classification, Entity Recognition
-    * This CUI leverages a built-in Action Server for contextual awareness enhancement and personalization during human interaction
+* This CUI adopts Open Source RASA framework due to its strong supporting community group and extensibility across closed-group and open-group implementation
+* This CUI utilises RASA core to navigate through various expected scenarios during user interaction and execute pre-defined events for exception handling
+* This CUI utilises RASA nlu to perform two main tasks while interacting with main users, namely: Intent Classification, Entity Recognition
+* This CUI leverages a built-in Action Server for contextual awareness enhancement and personalization during human interaction
 
 ### Understand Built-in Components:
 1. actions 
@@ -266,7 +266,7 @@
 
 ## Prompt LLM Model
 For first-hand experience with our fine-tuned LLM model, please follow instructions below to prompt the T5 model:
-1. after git clone this project, cd to chatbot folder
+1. after git clone this project, cd to chatbot/llm folder
 2. currently, our T5 model can take in these inputs:
     ```
     user_name
@@ -288,8 +288,7 @@ For first-hand experience with our fine-tuned LLM model, please follow instructi
     ```
 4. to use the module, import the packages as shown below
     ```
-    from chatbot.llm import *
-    from chatbot.llm import main as llm
+    import main as llm
     ```
     note `<chatbot>` is the main folder name and editable
 5. in your own python script, create your input as illustrated below:
