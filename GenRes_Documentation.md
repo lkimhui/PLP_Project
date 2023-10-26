@@ -179,7 +179,7 @@
         ```
     - launch the index.html web page
 
-#### Enable Integration : Closed-group / Private
+### Enable Integration : Closed-group / Private
 1. Create a Ngrok Account to bridge the Chatting Platform
     - register a [ngrok account](https://dashboard.ngrok.com/login)
     - login your ngrok account after successful registration
@@ -293,7 +293,7 @@ For first-hand experience with our fine-tuned LLM model, please follow instructi
     note `<chatbot>` is the main folder name and editable
 5. in your own python script, create your input as illustrated below:
     ```json
-    {
+    input = {
         "user_name": "your_name",
         "qualification": "your_qualification",
         "skillset": "your_skillset",
