@@ -33,13 +33,12 @@ intents:
 ### Entities
 ################################
 entities:
-  # - requestCV
   - cv
   - name
   - education
-  - principle
   - profession
   - skillset
+  - principle
   - resume
 
 
