@@ -293,7 +293,7 @@ For first-hand experience with our fine-tuned LLM model, please follow instructi
     note `<chatbot>` is the main folder name and editable
 5. in your own python script, create your input as illustrated below:
     ```json
-    input = {
+    {
         "user_name": "your_name",
         "qualification": "your_qualification",
         "skillset": "your_skillset",
