@@ -1,0 +1,48 @@
+version: "3.1"
+
+stories:
+
+- story: chat with affirmation
+  steps:
+  - intent: greet
+  - action: utter_bot_intro
+  - intent: request_coverletter
+  - action: utter_ask_name
+  - intent: provide_name
+    entities:
+      - name: John
+      - name: Soon Hang
+  - action: action_ask_form_permission
+  - action: user_details_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_submit_user_form
+  - intent: affirm
+  - action: utter_appreciation_and_wait
+  - action: action_generate_cover_letter
+
+- story: small chat with affirmation
+  steps:
+  - intent: greet_smalltalk
+  - action: utter_smalltalk_intro
+  - intent: request_coverletter
+  - action: utter_ask_name
+  - intent: provide_name
+    entities:
+      - name: John
+      - name: Soon Hang
+  - action: action_ask_form_permission
+  - action: user_details_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_submit_user_form
+  - intent: affirm
+  - action: utter_appreciation_and_wait
+  - action: action_generate_cover_letter
+
+- story: handle_out_of_scope
+  steps:
+  - intent: out_of_scope_resume
+  - action: utter_out_of_scope

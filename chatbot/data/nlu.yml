@@ -1,0 +1,198 @@
+version: "3.1"
+
+
+################################
+### NLU
+################################
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: greet_smalltalk
+  examples: |
+    - yo
+    - sup
+    - what's up
+    - hey
+    - hi
+
+- intent: affirm
+  examples: |
+    - yes
+    - sure
+    - certainly
+    - absolutely
+    - go ahead
+    - yes please
+    - yes, please
+    - sure, please
+    - why not
+    - carry on
+    - please proceed
+    - I am on board with the next step
+    - you have my go-ahead
+    - proceed as planned
+    - I approve
+    - I am comfortable with that
+
+- intent: deny
+  examples: |
+    - I doubt so
+    - doubt so
+    - no
+    - probably no
+    - I am not comfortable with that
+    - I don't think it's a good idea
+    - not a good idea
+    - I have reservations for that
+    - I would prefer to reconsider
+    - reconsider that please
+    - I am not on board with that
+    - delay it please
+    - delay the step please
+    - permission not granted
+
+- intent: not_sure
+  examples: |
+    - back your pardon
+    - pardon
+    - sorry, can you repeat
+    - can you repeat
+    - pardon me
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: provide_name
+  examples: |
+    - my name is [Soon Hang](name)
+    - name: [John](name)
+    - [Nolan](name)
+    - [Soon Hang](name) here
+    - call me [John](name)
+    - [Nolan](name) is my name
+
+- intent: provide_education
+  examples: |
+    - I have a [degree](education) in [Computer Science](principle)
+    - I graduated from [university](education)
+    - I finished [Form 6](education)
+    - [phd](education)
+    - education: [High School](education)
+    - I am a [Master Degree](education) in [Software Engineering](principle)
+    - I graducated in [Master](education) for [Mathematics](principle)
+
+- intent: provide_profession
+  examples: |
+    - I am a [Senior]{"entity":"profession", "role":"seniority"} [Engineer]{"entity":"profession", "role":"title"}
+    - an [Principal]{"entity":"profession", "role":"seniority"} [Engineer]{"entity":"profession", "role":"title"}
+    - I work as a [Junior]{"entity":"profession", "role":"seniority"} [Business Analyst]{"entity":"profession", "role":"title"}
+    - title: [Data Scientist]{"entity":"profession", "role":"title"}, level: [Senior]{"entity":"profession", "role":"seniority"}
+    - profession: [Staff]{"entity":"profession", "role":"seniority"} [Data Engineer]{"entity":"profession", "role":"title"}
+    - [Senior Staff]{"entity":"profession", "role":"seniority"} [Software Engineer]{"entity":"profession", "role":"title"}
+
+- intent: provide_skillset
+  examples: |
+    - [python]{"entity":"skillset"}, [R]{"entity":"skillset"}, [java]{"entity":"skillset"}
+    - [leadership]{"entity":"skillset"}, [code review]{"entity":"skillset"}, [Spring Boot]{"entity":"skillset"}
+
+- intent: request_coverletter
+  examples: |
+    - write me a [cover letter]{"entity":"cv"}
+    - write a [cv]{"entity":"cv"}
+    - compose a [CV]{"entity":"cv"} for company
+    - compose a [Cv]{"entity":"cv"} for job application
+    - need a [coverpage]{"entity":"cv"} for a job
+    - [coverletter]{"entity":"cv"}
+    - a [application letter]{"entity":"cv"} please
+
+- intent: out_of_scope_resume
+  examples: |
+    - write me a [resume]{"entity":"resume"}
+    - compose a [resume]{"entity":"resume"}
+    - [resume]{"entity":"resume"} please
+    - [resume]{"entity":"resume"}
+    - I need a [resume]{"entity":"resume"}
+
+
+################################
+### Synonym
+################################
+- synonym: finish
+  examples: |
+    - pass
+    - hold
+    - held
+    - own
+    - clear
+
+- synonym: cover letter
+  examples: |
+    - CV
+    - letter
+    - cover essay
+    - application letter
+    - cv
+    - coverletter
+    - cover page
+    - coverpage
+    - page
+    - cV
+    - Cv
+
+- synonym: seniority
+  examples: |
+    - level
+    - grade
+    - designation
+
+################################
+### Regex
+################################
+- regex: \[(\w+)\]\(name\)
+  examples: |
+    - [John](name) here
+
+- regex: \[(\w+)\]\{\"entity\"\:\"cv\"\}
+  examples: |
+    - write a [cover letter]{"entity":"cv"} please
+
+- regex: \[(\w+)\]\{\"entity\"\:\"skillset\"\}
+  examples: |
+    - [Python]{"entity":"skillset"}, [Spring Boot]{"entity":"skillset"}, [Java]{"entity":"skillset"}
+
+- regex: \[(\w+)\]\(education\)
+  examples: |
+    - I have a [degree](education) in Computer Science
+
+- regex: \[(\w+)\]\(principle\)
+  examples: |
+    - Master in [Computer Science](principle)

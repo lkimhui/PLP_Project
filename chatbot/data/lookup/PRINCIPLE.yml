@@ -1,0 +1,1788 @@
+version: "3.1"
+nlu:
+  - lookup: principle
+    examples: |
+      - Abnormal Psychology
+      - Academic Discipline
+      - Accompanying
+      - Accounting
+      - Accounting Research
+      - Accounting Scholarship
+      - Acoustical Engineering
+      - Acoustics
+      - Acting
+      - Actuarial Science
+      - Administrative Law
+      - Admiralty Law
+      - Advertising
+      - Aerial
+      - Aerobics
+      - Aerobiology
+      - Aerodynamics
+      - Aeronautics
+      - Aeroponics
+      - Aerospace Engineering
+      - Aesthetics
+      - Affect Control Theory
+      - Affine Geometry
+      - African History
+      - African Philosophy
+      - African Studies
+      - African-American Literature
+      - Africana Studies
+      - Agricultural Economics
+      - Agricultural Education
+      - Agricultural Engineering
+      - Agricultural Policy
+      - Agriculture
+      - Agrochemistry
+      - Agroecology
+      - Agrology
+      - Agronomy
+      - Air
+      - Algebra
+      - Algebraic Computation
+      - Algebraic Geometry
+      - Algebraic Number Theory
+      - Algebraic Topology
+      - Algorithms
+      - Alternative Education
+      - Alternative Medicine
+      - American History
+      - American Literature
+      - American Politics
+      - American Studies
+      - Amphibious Warfare
+      - Analysis
+      - Analytic Number Theory
+      - Analytic Philosophy
+      - Analytical Chemistry
+      - Analytical Sociology
+      - Anarchism
+      - Anarchist Economics
+      - Anatomical Pathology
+      - Anatomy
+      - Ancient
+      - Ancient Egypt
+      - Ancient Greek History
+      - Ancient History
+      - Ancient Literature
+      - Ancient Philosophy
+      - Ancient Roman History
+      - Andrology
+      - Anglican Theology
+      - Animal Communication
+      - Animal Communications
+      - Animal Husbandry
+      - Animal Law
+      - Animal Rights
+      - Animal Science
+      - Animation
+      - Anthropology
+      - Anthropology of Religion
+      - Anthroponics
+      - Anthrozoology
+      - Apiculture
+      - Apiology
+      - Appalachian Studies
+      - Applied Arts
+      - Applied Economics
+      - Applied Ethics
+      - Applied Linguistics
+      - Applied Mathematics
+      - Applied Philosophy
+      - Applied Physics
+      - Applied Psychology
+      - Applied Science
+      - Applied Sociology
+      - Approximation Theory
+      - Aquaculture
+      - Aquaponics
+      - Arab Studies
+      - Arabic Studies
+      - Arachnology
+      - Archaeology
+      - Architectural Analytics
+      - Architectural Engineering
+      - Architectural Sociology
+      - Architecture
+      - Architecture and Design
+      - Archival Science
+      - Archivist
+      - Area Studies
+      - Aristotelianism
+      - Arithmetic
+      - Arithmetic Combinatorics
+      - Armor
+      - Arms Control
+      - Arms Race
+      - Art Director
+      - Art Education
+      - Arthropodology
+      - Artificial Intelligence
+      - Artificial Neural Networks
+      - Artillery
+      - Asian History
+      - Asian Psychology
+      - Asian Studies
+      - Assassination
+      - Assignment Problem
+      - Associative Algebra
+      - Assyrian Civilization
+      - Assyriology
+      - Astrobiology
+      - Astrochemistry
+      - Astronautics
+      - Astronomy
+      - Astrophysical Plasma
+      - Astrophysics
+      - Asymmetric Warfare
+      - Athletic Director
+      - Athletic Training
+      - Atmology
+      - Atmospheric Chemistry
+      - Atmospheric Science
+      - Atomic, Molecular, and Optical Physics
+      - Attrition
+      - Audiology
+      - Australian History
+      - Australian Studies
+      - Automata Theory
+      - Automated Reasoning
+      - Automotive Engineering
+      - Bacteriology
+      - Baptist Theology
+      - Bariatric Surgery
+      - Batoning
+      - Batrachology
+      - Battle
+      - Battlespace
+      - Beekeeping
+      - Behavioral NeuroScience
+      - Behavioral Sociology
+      - Behavioural Economics
+      - Behavioural Genetics
+      - Behavioural Geography
+      - Bengal Studies
+      - Biblical Hebrew
+      - Biblical Hebrew, Koine Greek, Aramaic
+      - Biblical History
+      - Biblical Studies
+      - Bibliographic Databases
+      - Bibliometrics
+      - Bilingual Education
+      - Biochemical Engineering
+      - Biochemical Systems Theory
+      - Biochemistry
+      - Biocultural Anthropology
+      - Biocybernetics
+      - BioEconomics
+      - Bioengineering
+      - Bioethics
+      - Biogeography
+      - Bioinformatics
+      - Biological
+      - Biological Anthropology
+      - Biological Psychology
+      - Biological Systems Engineering
+      - Biology
+      - Biomaterials
+      - Biomechanical Engineering
+      - Biomechanics
+      - Biomedical Engineering
+      - Biomolecular Engineering
+      - Biophysics
+      - Biotechnology
+      - Black Holes
+      - Black Psychology
+      - Bookmobile
+      - Botany
+      - British Literature
+      - Broadcast Journalism
+      - Bronze Age Civilizations
+      - Bryozoology
+      - Buddhist Theology
+      - Bushcraft
+      - Business
+      - Business Administration
+      - Business Analysis
+      - Business Ethics
+      - Business Informatics
+      - Business Law
+      - Business Management
+      - Calculus
+      - Calligraphy
+      - Campaigning
+      - Canadian Politics
+      - Canadian Studies
+      - Canon Law
+      - Carcinology
+      - Cardiac Electrophysiology
+      - Cardiology
+      - Cardiothoracic Surgery
+      - Carthage
+      - Cartography
+      - Cataloging
+      - Catalysis
+      - Categorization
+      - Category Theory
+      - Catholic Theology
+      - Cavalry
+      - Celestial Cartography
+      - Cell Biology
+      - Celtic Studies
+      - Central Asian Studies
+      - Ceramic Engineering
+      - Cetology
+      - Chamber Music
+      - Chaos Theory
+      - Charge
+      - Chemical
+      - Chemical Biology
+      - Chemical Engineering
+      - Cheminformatics
+      - Chemistry
+      - Chemistry Education
+      - Child Psychopathology
+      - Child Welfare
+      - Children Study
+      - Chinese History
+      - Choral Conducting
+      - Choreography
+      - Christian Ethics
+      - Christian Theology
+      - Chronobiology
+      - Church History
+      - Church Music
+      - Citation analysis
+      - Civics
+      - Civil Defense
+      - Civil Engineering
+      - Civil Law
+      - Civil Procedure
+      - Civil Service
+      - Clandestine Operation
+      - Classification
+      - Climate Change Policy
+      - Climatology
+      - Clinical Biochemistry
+      - Clinical Immunology
+      - Clinical Informatics
+      - Clinical Laboratory Sciences
+      - Clinical Microbiology
+      - Clinical neuropsychology
+      - Clinical Pathology
+      - Clinical Physiology
+      - Clinical Psychology
+      - Clinical Social Work
+      - Cloud Computing
+      - Cnidariology
+      - Coastal Engineering
+      - Coastal Geography
+      - Coastal Management
+      - Coding Theory
+      - Cognitive Geography
+      - Cognitive Psychology
+      - Cognitive Science
+      - Cold War
+      - Collateral Damage
+      - Collection Management
+      - Collection Management Policy
+      - Collections Care
+      - Collective Bargaining
+      - Collective Behavior
+      - Combat
+      - Combinatorics
+      - Comics Studies
+      - Command and Control
+      - Commercial Law
+      - Commercial Policy
+      - Common Law
+      - Communication Design
+      - Communication Studies
+      - Community Informatics
+      - Community Organizing
+      - Community Practice
+      - Community Psychology
+      - Commutative Algebra
+      - Comparative Anatomy
+      - Comparative Education
+      - Comparative Law
+      - Comparative Literature
+      - Comparative Politics
+      - Comparative Psychology
+      - Comparative Sociology
+      - Compilers
+      - Complex Analysis
+      - Complex Systems
+      - Complexity Economics
+      - Composition Studies
+      - Computability Theory
+      - Computational Biology
+      - Computational Chemistry
+      - Computational Complexity Theory
+      - Computational Economics
+      - Computational Finance
+      - Computational Fluid Dynamics
+      - Computational Geometry
+      - Computational Linguistics
+      - Computational Mathematics
+      - Computational NeuroScience
+      - Computational Number Theory
+      - Computational Physics
+      - Computational Science
+      - Computational Sociology
+      - Computational Systems Biology
+      - Computer Architecture
+      - Computer Communications
+      - Computer Engineering
+      - Computer Graphics
+      - Computer Science
+      - Computer Security and Reliability
+      - Computer Vision
+      - Computer-aided Engineering
+      - Computing in Arts
+      - Computing in Engineering
+      - Computing in Humanities
+      - Computing in Mathematics
+      - Computing in Medicine
+      - Computing in Natural Sciences
+      - Computing in Professions
+      - Computing in Social Sciences
+      - Conceptual Systems
+      - Conchology
+      - Concurrency Theory
+      - Concurrent Programming
+      - Condensed Matter Physics
+      - Conducting
+      - Conflict Theory
+      - Conservation and Restoration of Cultural Heritage
+      - Conservation Biology
+      - Conservation Psychology
+      - Conservation Science
+      - Conspiracy Theory
+      - Constitutional Law
+      - Consumer Economics
+      - Consumer Education
+      - Consumer Psychology
+      - Containment
+      - Contemporary Philosophy
+      - Continental Philosophy
+      - Continuum Mechanics
+      - Contract Law
+      - Control Engineering
+      - Control Systems
+      - Control Systems Engineering
+      - Control Theory
+      - Conventional
+      - Convex Geometry
+      - Cooperative Learning
+      - Corporate Law
+      - Corporations
+      - Corrections
+      - Cosmochemistry
+      - Cosmology
+      - Counseling Psychology
+      - Counselor Education
+      - Counter-attack
+      - Counter-insurgency
+      - Counter-intelligence
+      - Counter-offensive
+      - Counter-terrorism
+      - Covert Operation
+      - Creative Writing
+      - Criminal Justice
+      - Criminal Law
+      - Criminal Procedure
+      - Criminal Psychology
+      - Criminology
+      - Critical Management Studies
+      - Critical Pedagogy
+      - Critical Sociology
+      - Critical Theory
+      - Cross-cultural Studies
+      - Cryobiology
+      - Cryogenics
+      - Cryptography
+      - Crystallography
+      - Culinary Arts
+      - Cultural Anthropology
+      - Cultural Geography
+      - Cultural History
+      - Cultural Policy
+      - Cultural Psychology
+      - Cultural Sociology
+      - Cultural Studies
+      - Culturology
+      - Curator
+      - Curriculum and Instruction
+      - Cyber
+      - Cybernetics
+      - Cyberwarfare
+      - Cynology
+      - Cytogenetics
+      - Cytohematology
+      - Cytology
+      - Dance
+      - Dance Notation
+      - Data Management
+      - Data Mining
+      - Data Modeling
+      - Data Storage
+      - Data Structures
+      - Data Visualization
+      - Database Management
+      - Databases
+      - Deaf Studies
+      - Deception
+      - Decision Analysis
+      - Decorative Arts
+      - Defense Industry
+      - Defensive
+      - Demography
+      - Dental Hygiene and Epidemiology
+      - Dental Surgery
+      - Dentistry
+      - Dermatology
+      - Dermatopathology
+      - Descriptive Ethics
+      - Determinism and Free Will
+      - Development Economics
+      - Development Geography
+      - Developmental Biology
+      - Developmental Psychology
+      - Developmental Systems Theory
+      - Differential Algebra
+      - Differential Psychology
+      - Differential Topology
+      - Digital Art
+      - Digital Humanities
+      - Digital Journalism
+      - Digital Media
+      - Digital Preservation
+      - Digital Sociology
+      - Directing
+      - Disarmament
+      - Disaster Research
+      - Disaster Response
+      - Discourse Analysis
+      - Discrete Geometry
+      - Dissemination
+      - Distance Education
+      - Distributed Algorithms
+      - Distributed Computing
+      - Distributed Databases
+      - Divinity
+      - Doctrine
+      - Dogmatic Theology
+      - Domestic Policy
+      - Dramaturgical Sociology
+      - Dramaturgy
+      - Dravidian Studies
+      - Dravidology
+      - Drawing
+      - Drug Policy
+      - Drug Policy Reform
+      - Dynamic Programming
+      - Dynamical Systems
+      - E-Business
+      - Early Childhood Education
+      - Early Modern
+      - Early Music
+      - Earth Science
+      - Earth Systems Engineering and Management
+      - Earthquake Engineering
+      - East Asian Studies
+      - Eastern Orthodox Theology
+      - Eastern Philosophy
+      - Ecclesiastical History of The Catholic Church
+      - Ecclesiology
+      - Ecological Economics
+      - Ecological Engineering
+      - Ecological Psychology
+      - Ecological Systems Theory
+      - Ecology
+      - Econometrics
+      - Economic
+      - Economic Development
+      - Economic Geography
+      - Economic History
+      - Economic Policy
+      - Economic Sociology
+      - Economic Systems
+      - Economics
+      - Ecosystem Ecology
+      - Edaphology
+      - Education
+      - Education and Training
+      - Education Economics
+      - Education Policy
+      - Educational Leadership
+      - Educational Philosophy
+      - Educational Psychology
+      - Educational Sociology
+      - Educational Technology
+      - Egyptology
+      - Electrical Engineering
+      - Electricity
+      - Electrochemistry
+      - Electromagnetism
+      - Electronic
+      - Electronic Engineering
+      - Electronic Media
+      - Elementary Education
+      - Elementary Particle Physics
+      - Embryology
+      - Emergency Management
+      - Emergency Medicine
+      - Emergency Services
+      - Empirical Sociology
+      - Endemic Warfare
+      - Endocrinology
+      - Endodontics
+      - Energy Economics
+      - Energy Policy
+      - Engineering Cybernetics
+      - Engineering Geology
+      - Engineering Physics
+      - Engineers
+      - English Literature
+      - English Studies
+      - Enology
+      - Enterprise Systems Engineering
+      - Entomology
+      - Entrepreneurial Economics
+      - Entrepreneurship
+      - Environmental Chemistry
+      - Environmental Communication
+      - Environmental Economics
+      - Environmental Engineering
+      - Environmental Ethics
+      - Environmental Geography
+      - Environmental History
+      - Environmental Law
+      - Environmental Management
+      - Environmental Policy
+      - Environmental Psychology
+      - Environmental Science
+      - Environmental Sociology
+      - Environmental Studies and Forestry
+      - Epidemiology
+      - Epigenetics
+      - Epistemology
+      - Ergodic Theory
+      - Ergonomics
+      - Escapology
+      - Espionage
+      - Ethics
+      - Ethnic Studies
+      - Ethnobiology
+      - Ethnobotany
+      - Ethnochoreology
+      - Ethnoecology
+      - Ethnology
+      - Ethnomethodology
+      - Ethnomusicology
+      - Ethnozoology
+      - Ethology
+      - Etymology
+      - European History
+      - European Studies
+      - Evolutionary Anthropology
+      - Evolutionary Biology
+      - Evolutionary Economics
+      - Evolutionary Psychology
+      - Evolutionary Sociology
+      - Exercise
+      - Exercise Physiology
+      - Exercise Science
+      - Experimental Economics
+      - Experimental Physics
+      - Experimental Psychology
+      - Expert Systems
+      - Family and Consumer Science
+      - Family Law
+      - Family Psychology
+      - Family Systems Theory
+      - Family Therapy
+      - Fan Studies
+      - Fashion
+      - Fashion Design
+      - Fault-tolerant Computing
+      - Federal Law
+      - Felinology
+      - Feminine Psychology
+      - Feminist Archaeology
+      - Feminist Economics
+      - Feminist Philosophy
+      - Feminist Sociology
+      - Femtochemistry
+      - Fiction
+      - Field Ministry
+      - Field Theory
+      - Figurational Sociology
+      - Filipinology
+      - Film
+      - Film Classification
+      - Film Criticism
+      - Film Preservation
+      - Film Studies
+      - Film Theory
+      - Filmmaking
+      - Finance
+      - Financial Econometrics
+      - Financial Economics
+      - Financial Social Work
+      - Fine Arts
+      - Finite Element Analysis
+      - Finite Geometry
+      - Fire Ecology
+      - Fire Safety
+      - Fiscal Policy
+      - Fisheries Management
+      - Five Laws of Library Science
+      - Flavor
+      - Flow Chemistry
+      - Fluid Dynamics
+      - Fluid Mechanics
+      - Fogponics
+      - Food Engineering
+      - Food Policy
+      - Food Science
+      - Foodservice Management
+      - Foreign Policy
+      - Forensic Anthropology
+      - Forensic Developmental Psychology
+      - Forensic Entomology
+      - Forensic Pathology
+      - Forensic Psychiatry
+      - Forensic Psychology
+      - Forensic Science
+      - Forestry
+      - Formal Languages
+      - Formal Methods
+      - Formal Methods 
+      - Formal Verification
+      - Fourier Analysis
+      - Fourth-generation Warfare
+      - Foxhole
+      - Fractal Geometry
+      - Functional Analysis
+      - Functional Programming
+      - Futures Studies
+      - Fuzzy Logic
+      - Galaxy Formation and Evolution
+      - Galois Geometry
+      - Game Design
+      - Game Studies
+      - Game Theory
+      - Gamma ray Astronomy
+      - Gastroenterology
+      - Gemology
+      - Gender Studies
+      - General Practice
+      - General Systems Theory
+      - General Topology
+      - Genetics
+      - Geobiology
+      - Geochemistry
+      - Geodesy
+      - Geography
+      - Geology
+      - Geomatics
+      - Geometric Number Theory
+      - Geometric Topology
+      - Geometry and Topology
+      - Geomorphology
+      - Geophysics
+      - Geopolitics
+      - Geostatistics
+      - Geotechnical Engineering
+      - Geriatrics
+      - German Studies
+      - Gerontology
+      - Glaciology
+      - Goal
+      - Governmental Affairs
+      - Grammar
+      - Grammatology
+      - Grand Strategy
+      - Graph Theory
+      - Graphic Arts
+      - Graphic Design
+      - Gravitational Astronomy
+      - Green Chemistry
+      - Green Economics
+      - Grid Computing
+      - Group Fitness
+      - Group Psychology
+      - Group Representation
+      - Group Theory
+      - Growth Economics
+      - Guerrilla Warfare
+      - Gynaecology
+      - Haemostasiology
+      - Harmonic Analysis
+      - Health Economics
+      - Health Geography
+      - Health Informatics
+      - Health Policy
+      - Health Psychology
+      - Heat Transfer
+      - Helioseismology
+      - Helminthology
+      - Hematology
+      - Hematopathology
+      - Hepatology
+      - Hermeneutics
+      - Herpetology
+      - Heterosexism
+      - High-Energy Astrophysics
+      - High-performance Computing
+      - Higher Education
+      - Highway Engineering
+      - Highway Safety
+      - Hindu Ethics
+      - Hindu Theology
+      - Histochemistry
+      - Histology
+      - Histopathology
+      - Historic Preservation
+      - Historical Geography
+      - Historical Linguistics
+      - Historical Musicology
+      - Historical Sociology
+      - Historical Theology
+      - History
+      - History of Computer Hardware
+      - History of Computer Science
+      - History of Dance
+      - History of Library Science
+      - History of Linguistics
+      - History of Literature
+      - History of Mesopotamia
+      - History of Political Thought
+      - History of Religion
+      - History of The Indus Valley Civilization
+      - History of The Yangtze Civilization
+      - History of The Yellow River Civilization
+      - History of Theatre
+      - Hoax
+      - Holistic Medicine
+      - Homiletics
+      - Homological Algebra
+      - Horticulture
+      - Housing
+      - Housing Policy
+      - Human Anatomy
+      - Human Biology
+      - Human Development Theory
+      - Human Ecology
+      - Human Geography
+      - Human Performance
+      - Human Performance Technology
+      - Human Physical Performance and Recreation
+      - Human Physiology
+      - Human Resources
+      - Human Services
+      - Human Sexual Behavior
+      - Human Sexuality
+      - Human-computer Interaction
+      - Humanism
+      - Humanistic Informatics
+      - Humanistic Psychology
+      - Humanistic Sociology
+      - Humanities Computing
+      - Hydraulic Engineering
+      - Hydrodynamics
+      - Hydrogenation
+      - Hydrogeology
+      - Hydrology
+      - Hydroponics
+      - Hypermedia
+      - Ichthyology
+      - Image Processing
+      - Immigration Policy
+      - Immunochemistry
+      - Immunology
+      - Imperative Programming
+      - Implantology
+      - Incomes Policy
+      - Indexer
+      - Indian History
+      - Indigenous Psychology
+      - Indonesian History
+      - Industrial
+      - Industrial and Labor Relations
+      - Industrial Design
+      - Industrial Engineering
+      - Industrial Organization
+      - Industrial Policy
+      - Industrial Psychology
+      - Industrial Sociology
+      - Infantry
+      - Infectious Disease
+      - Infiltration
+      - Infographics
+      - Informatics
+      - Information
+      - Information Architecture
+      - Information Broker
+      - Information Economics
+      - Information Literacy
+      - Information Management
+      - Information Retrieval
+      - Information Science
+      - Information Systems
+      - Information Systems and Technology
+      - Information Technology
+      - Information Theory
+      - Infrared Astronomy
+      - Inorganic Chemistry
+      - Institutional Economics
+      - Instructional Design
+      - Instructional Simulation
+      - Instrumentation Engineering
+      - Integral Geometry
+      - Integrated Geography
+      - Integrated Library System
+      - Intellectual History
+      - Intelligence
+      - Intelligence Agency
+      - Intensive Care Medicine
+      - Interaction Design
+      - Interactionism
+      - Intercultural Communication
+      - Interior Architecture
+      - Interior Design
+      - Interior Design 
+      - Interlibrary Loan
+      - Interlinguistics
+      - Intermodal Transportation Studies
+      - Internal Medicine
+      - International Affairs
+      - International Economics
+      - International Law
+      - International Organizations
+      - International Relations
+      - International Trade
+      - Internet
+      - Interpretive Sociology
+      - Interstellar Medium
+      - Intuitionistic Logic
+      - Inventory Theory
+      - Invertebrate Zoology
+      - Investment Policy
+      - Iranian History
+      - Iranian Studies
+      - Irregular Warfare
+      - Islamic Economics
+      - Islamic Law
+      - Islamic Philosophy
+      - Japanese Studies
+      - Jazz Studies
+      - Jealousy Sociology
+      - Jewish History
+      - Jewish Law
+      - Jewish Studies
+      - Jewish Theology
+      - Journalism
+      - Journalism, Media Studies and Communication
+      - Jurisprudence
+      - Justification
+      - K-Theory
+      - Kinesiology
+      - Knowledge Engineering
+      - Knowledge Management
+      - Knowledge Policy
+      - Korean Studies
+      - Labor Economics
+      - Labor History
+      - Labor Law
+      - Laboratory Medicine
+      - Land
+      - Land Management
+      - Landscape Architecture
+      - Landscape Design
+      - Landscape Ecology
+      - Landscape Planning
+      - Language Education
+      - Language Geography
+      - Language Policy
+      - Languages and Literature
+      - Latin
+      - Latin American History
+      - Latin American Studies
+      - Lattice Theory
+      - Law
+      - Law and Economics
+      - Law Enforcement
+      - Laws of War
+      - Leadership
+      - Legal Education
+      - Legal Management
+      - Legal Psychology
+      - Leisure Studies
+      - Lexicology
+      - Libertarianism
+      - Library
+      - Library and Museum Studies
+      - Library Binding
+      - Library Circulation
+      - Library Classification
+      - Library Instruction
+      - Library Portal
+      - Library Technical Services
+      - Lie Algebra
+      - Limacology
+      - Limited War
+      - Limnology
+      - Linear Algebra
+      - Linear Programming
+      - Linguistic Anthropology
+      - Linguistic Typology
+      - Linguistics
+      - Linnaean Taxonomy
+      - Literary Criticism
+      - Literary Journalism
+      - Literary Theory
+      - Lithology
+      - Liturgy
+      - Live Action
+      - Living Systems Theory
+      - Logic
+      - Logic in Computer Science
+      - Logic Programming
+      - Logistics
+      - LTI System Theory
+      - Machine Learning
+      - Macroeconomics
+      - Macrosociology
+      - Magazine
+      - Magnetohydrodynamics
+      - Malacology
+      - Mammalogy
+      - Management
+      - Management Cybernetics
+      - Management Information Systems
+      - Managerial Economics
+      - Maneuver
+      - Manufacturing Engineering
+      - Marine Biology
+      - Marine Chemistry
+      - Marine Engineering
+      - Marine Transportation
+      - Maritime Archaeology
+      - Marketing
+      - Marketing Geography
+      - Marxian Economics
+      - Marxism
+      - Marxist Sociology
+      - Mass Communication
+      - Mass Deacidification
+      - Mass Media
+      - Mass Transfer
+      - Mass Transit
+      - Mastery Learning
+      - Materials Engineering
+      - Materials Science and Engineering
+      - Materiel
+      - Mathematical Biology
+      - Mathematical Chemistry
+      - Mathematical Economics
+      - Mathematical Geography
+      - Mathematical Logic
+      - Mathematical Logic and Foundations of Mathematics
+      - Mathematical Optimization
+      - Mathematical Physics
+      - Mathematical Psychology
+      - Mathematical Sociology
+      - Mathematical Statistics
+      - Mathematical System Theory
+      - Mathematics
+      - Mathematics Education
+      - Measure Theory
+      - Mechanical Engineering
+      - Mechanics
+      - Mechanochemistry
+      - Mechatronics
+      - Media Psychology
+      - Media Studies
+      - Medical Cybernetics
+      - Medical Education
+      - Medical Physics
+      - Medical Psychology
+      - Medical Social Work
+      - Medical Sociology
+      - Medical Toxicology
+      - Medicinal Chemistry
+      - Medicine and Health
+      - Medieval
+      - Medieval Literature
+      - Medieval Philosophy
+      - Men's Studies
+      - Mental Health
+      - Mercantile Law
+      - Mercenary
+      - Mesosociology
+      - Meta-ethics
+      - Meta-philosophy
+      - Metaphysics
+      - Meteorology
+      - Microbiology
+      - Microeconomics
+      - Microsociology
+      - Microwave Astronomy
+      - Middle Eastern Studies
+      - Military Campaign
+      - Military Education and Training
+      - Military Engineering
+      - Military Exercises
+      - Military Geography
+      - Military History
+      - Military Intelligence
+      - Military Law
+      - Military Medicine
+      - Military Operation
+      - Military Policy
+      - Military Psychology
+      - Military Science
+      - Military Sciences
+      - Military Simulation
+      - Military Sociology
+      - Military Sports
+      - Military Weapons
+      - Mineralogy
+      - Mining Engineering
+      - Missiology
+      - Mixed Media
+      - Mobile Computing
+      - Mock Combat
+      - Modal Logic
+      - Model Theory
+      - Modern
+      - Modern History
+      - Modern Philosophy
+      - Molecular Biology
+      - Molecular Engineering
+      - Molecular Genetics
+      - Molecular Mechanics
+      - Molecular Pathology
+      - Molecular Physics
+      - Molecular Virology
+      - Monetary Economics
+      - Monetary Policy
+      - Moral Psychology
+      - Moral Psychology and Descriptive Ethics
+      - Moral Theology
+      - Morale
+      - Morphology
+      - Multi-valued Logic
+      - Multilinear Algebra
+      - Multimedia
+      - Museology
+      - Museum Administration
+      - Museum Education
+      - Music
+      - Music Education
+      - Music History
+      - Music Psychology
+      - Music Theory
+      - Music Therapy
+      - Musical Composition
+      - Musical Theatre
+      - Musicology
+      - Muslim Theology
+      - Mycology
+      - Myriapodology
+      - Myrmecology
+      - Nanoengineering
+      - Nanomaterials
+      - Nanotechnology
+      - Narratology
+      - Nationalism Studies
+      - Natural Language Processing
+      - Natural Product Chemistry
+      - Natural Resource Management
+      - Natural Resource Sociology
+      - Naval
+      - Naval Architecture
+      - Naval Engineering
+      - Naval Science
+      - Naval tactics
+      - Navigation
+      - Nematology
+      - Nephrology
+      - Network Science
+      - Network-centric Warfare
+      - Neural Engineering
+      - Neuro-ophthalmology
+      - Neurochemistry
+      - Neuroeconomics
+      - Neuroethology
+      - Neurology
+      - Neuropsychology
+      - NeuroScience
+      - Neurosurgery
+      - New Cybernetics
+      - New Media Journalism
+      - New Testament Greek
+      - Newspaper
+      - Newtonian Dynamics
+      - Non-associative Algebra
+      - Non-Euclidean Geometry
+      - Non-fiction
+      - Non-governmental Organization (NGO) Administration
+      - Non-standard Analysis
+      - Noncommutative Algebra
+      - Noncommutative Geometry
+      - Nonprofit Administration
+      - Nonverbal Communication
+      - Normative Ethics
+      - Nuclear
+      - Nuclear Energy Policy
+      - Nuclear Engineering
+      - Nuclear Physics
+      - Number Theory
+      - Numerical Analysis
+      - Numerical Simulations
+      - Nursing
+      - Nursing Education
+      - Nutrition
+      - Nutrition and Dietetics
+      - Object Conservation
+      - Object Databases
+      - Object-oriented Programming
+      - Observational Astronomy
+      - Obstetrics
+      - Occupational Health Psychology
+      - Occupational Hygiene
+      - Occupational Psychology
+      - Occupational Therapy
+      - Occupational Toxicology
+      - Ocean Engineering
+      - Oceanography
+      - Oenology
+      - Offensive
+      - Old Church Slavonic
+      - Oncology
+      - Ontology
+      - Oology
+      - Operating Systems
+      - Operations Management
+      - Operations Research
+      - Operator Theory
+      - Ophthalmology
+      - Optical Astronomy
+      - Optical Engineering
+      - Optics
+      - Optimal Maintenance
+      - Optometry
+      - Oral and Maxillofacial Surgery
+      - Orchestral Conducting
+      - Orchestral Studies
+      - Order Theory
+      - Ordinary Differential Equations
+      - Organ And Historical Keyboards
+      - Organic Chemistry
+      - Organization
+      - Organizational Communication
+      - Organizational Psychology
+      - Organizational Studies
+      - Organizational Theory
+      - Organology
+      - Organometallic Chemistry
+      - Ornithology
+      - Orthodontics
+      - Orthopedic Surgery
+      - Orthoptics
+      - Other Military
+      - Otolaryngology
+      - Outdoor Activity
+      - Outdoor Education
+      - p-adic Analysis
+      - Painting
+      - Pakistan Studies
+      - Palaeoanthropology
+      - Palaeogeography
+      - Palaeontology
+      - Paleobiology
+      - Paleoclimatology
+      - Paleoecology
+      - Pali Studies
+      - Paralegal Studies
+      - Parallel Algorithms
+      - Parallel Computing
+      - Paramilitary
+      - Parapsychology
+      - Parasitology
+      - Partial Differential Equations
+      - Participatory Economics
+      - Pastoral Counseling
+      - Pastoral Theology
+      - Pathology
+      - Peace and Conflict Studies
+      - Peace Education
+      - Pedagogy
+      - Pediatric Psychology
+      - Pediatrics
+      - Pedology
+      - Pedology 
+      - Perceptual Control Theory
+      - Performance Science
+      - Performing Arts
+      - Periodontics
+      - Person-centered Therapy
+      - Personal Fitness Training
+      - Personal Trainer
+      - Personality Psychology
+      - Pest Control
+      - Petrochemistry
+      - Petroleum Engineering
+      - Petrology
+      - Pharmaceutical Chemistry
+      - Pharmaceutical Policy
+      - Pharmaceutical Sciences
+      - Pharmaceutical Toxicology
+      - Pharmaceutics
+      - Pharmacocybernetics
+      - Pharmacodynamics
+      - Pharmacogenomics
+      - Pharmacognosy
+      - Pharmacokinetics
+      - Pharmacology
+      - Pharmacy
+      - Phenomenological Sociology
+      - Phenomenology
+      - Phenomenology of Religion
+      - Philology
+      - Philosophical History
+      - Philosophical Logic
+      - Philosophical Traditions And Schools
+      - Philosophy
+      - Philosophy of Action
+      - Philosophy of Artificial Intelligence
+      - Philosophy of Biology
+      - Philosophy of Chemistry
+      - Philosophy of Economics
+      - Philosophy of Education
+      - Philosophy of Engineering
+      - Philosophy of History
+      - Philosophy of Language
+      - Philosophy of Law
+      - Philosophy of Mathematics
+      - Philosophy of Mind
+      - Philosophy of Music
+      - Philosophy of Pain
+      - Philosophy of Perception
+      - Philosophy of Physical Sciences
+      - Philosophy of Physics
+      - Philosophy of Psychology
+      - Philosophy of Religion
+      - Philosophy of Social Science
+      - Philosophy of Space and Time
+      - Philosophy of Technology
+      - Philosophy of War
+      - Phonetics
+      - Phonology
+      - Photochemistry
+      - Photography
+      - Photonics
+      - Phycology
+      - Physical Activity
+      - Physical Chemistry
+      - Physical Cosmology
+      - Physical Education
+      - Physical Fitness
+      - Physical Geography
+      - Physical Metallurgy
+      - Physical Organic Chemistry
+      - Physical Therapy
+      - Physics
+      - Physics Education
+      - Physiology
+      - Physiotherapy
+      - Phytochemistry
+      - Phytogeography
+      - Piano
+      - Planetary Cartography
+      - Planetary Science
+      - Planktology
+      - Plant Science
+      - Plasma Physics
+      - Plastic Surgery
+      - Platonism
+      - Playwrighting
+      - Podiatry
+      - Poetics
+      - Poetry
+      - Police Science
+      - Policy Analysis
+      - Policy Sociology
+      - Policy Studies
+      - Political Behavior
+      - Political Culture
+      - Political Economy
+      - Political Geography
+      - Political History
+      - Political Philosophy
+      - Political Psychology
+      - Political Science
+      - Political Sociology
+      - Polymer Chemistry
+      - Polymer Engineering
+      - Polymer Science
+      - Pomology
+      - Popular Culture Studies
+      - Population
+      - Population Genetics
+      - Population Geography
+      - Port Management
+      - Positive Psychology
+      - Post-colonial Literature
+      - Post-modern Literature
+      - Power Engineering
+      - Pragmatics
+      - Pre-Columbian Era History
+      - Preclassic Maya
+      - Prehistoric
+      - Prehistory
+      - Preservation
+      - Preventive Medicine
+      - Primary Care
+      - Primatology
+      - Principles of War
+      - Print Journalism
+      - Printmaking
+      - Private Defense Agency
+      - Private Military Company
+      - Probability Theory
+      - Procedural Law
+      - Process Design
+      - Process Engineering
+      - Product Design
+      - Program Semantics
+      - Programming Language Semantics
+      - Programming Languages
+      - Programming Paradigms
+      - Projective Geometry
+      - Proof Theory
+      - Propaganda
+      - Property Law
+      - Prose
+      - Prospect Research
+      - Prosthodontics
+      - Protestant Theology
+      - Protistology
+      - Proxy War
+      - Psephology
+      - Psychiatry
+      - Psychoanalysis
+      - Psychoanalytic Sociology
+      - Psychobiology
+      - Psycholinguistics
+      - Psychological
+      - Psychology
+      - Psychology of Eeligion
+      - Psychology of Religion
+      - Psychometrics
+      - Psychopathology
+      - Psychophysics
+      - Psychosocial Rehabilitation
+      - Public Administration
+      - Public Economics
+      - Public Finance
+      - Public Health
+      - Public History
+      - Public International Law
+      - Public Law
+      - Public Policy
+      - Public Policy by Country
+      - Public Policy Doctrine
+      - Public Policy School
+      - Public Relations
+      - Public Safety
+      - Public Service
+      - Public Sociology
+      - Pulmonology
+      - Puppetry
+      - Purchasing
+      - Pure Sociology
+      - Purification
+      - Quantitative Psychology
+      - Quantum Chemistry
+      - Quantum Computing
+      - Quantum Field Theory
+      - Quantum Gravity
+      - Quantum Mechanics
+      - Quantum Physics
+      - Quaternary Science
+      - Queer Studies
+      - Queer Theory
+      - Radio
+      - Radio Astronomy
+      - Radiochemistry
+      - Radiology
+      - Randomized Algorithms
+      - Ranks
+      - Reaction Engineering
+      - Readers' Advisory
+      - Reading Education
+      - Real Analysis
+      - Real Estate Economics
+      - Real Options Analysis
+      - Reasoning Errors
+      - Recording
+      - Records Management
+      - Recreation Ecology
+      - Recreational Therapy
+      - Recursion Theory
+      - Reference
+      - Reference Desk
+      - Reference Management Software
+      - Registrar
+      - Regulation
+      - Rehabilitation Medicine
+      - Rehabilitation Psychology
+      - Relational Databases
+      - Religion Geography
+      - Religious Education
+      - Religious Education Techniques
+      - Religious Studies
+      - Religious War
+      - Renewable Energy Policy
+      - Representation Theory
+      - Research Methods
+      - Resource Economics
+      - Respiratory Therapy
+      - Rhetoric
+      - Rheumatology
+      - Ring Theory
+      - Risk Management and Insurance
+      - Robotics
+      - Rural Sociology
+      - Russian History
+      - Sacramental Theology
+      - Sacred Music
+      - Sacred Scripture
+      - Sanskrit Studies
+      - Scandinavian Studies
+      - Scenography
+      - Scheduling
+      - Scholasticism
+      - School Psychology
+      - School Social Work
+      - Science and Technology Studies
+      - Science Education
+      - Science Policy
+      - Science Studies
+      - Scientific Classification
+      - Scientific Computing
+      - Scientific History
+      - Scientific Visualization
+      - Scoutcraft
+      - Scriptural Study and Languages
+      - Sculpture
+      - Sea
+      - Seafaring
+      - Second-order Cybernetics
+      - Secondary Education
+      - Security
+      - Security Classification
+      - Security Policy
+      - Sedimentology
+      - Semantics
+      - Semiconductors
+      - Semiotics
+      - Set Theory
+      - Sex Education
+      - Sexology
+      - Siege
+      - Silviculture
+      - Sindhology
+      - Singapore Politics
+      - Singing
+      - Sinology
+      - Slavic Studies
+      - Sleep Medicine
+      - Slow Fire
+      - Social Anthropology
+      - Social Capital
+      - Social Change
+      - Social Choice Theory
+      - Social Conflict Theory
+      - Social Constructionism
+      - Social Control
+      - Social Development
+      - Social Dynamics
+      - Social Economy
+      - Social Engineering
+      - Social Geography
+      - Social Movements
+      - Social Network Analysis
+      - Social Philosophy
+      - Social Philosophy And Political Philosophy
+      - Social Policy
+      - Social Psychology
+      - Social Stratification
+      - Social Theory
+      - Social Transformation
+      - Social Work
+      - Socialist Economics
+      - Sociobiology
+      - Sociocybernetics
+      - Socioeconomics
+      - Sociolinguistics
+      - Sociology
+      - Sociology in Poland
+      - Sociology of Aging
+      - Sociology of Agriculture
+      - Sociology of Art
+      - Sociology of Autism
+      - Sociology of Childhood
+      - Sociology of Conflict
+      - Sociology of Culture
+      - Sociology of Cyberspace
+      - Sociology of Development
+      - Sociology of Deviance
+      - Sociology of Disaster
+      - Sociology of Education
+      - Sociology of Emotions
+      - Sociology of Fatherhood
+      - Sociology of Finance
+      - Sociology of Food
+      - Sociology of Gender
+      - Sociology of Generations
+      - Sociology of Globalization
+      - Sociology of Government
+      - Sociology of Health and Illness
+      - Sociology of Human Consciousness
+      - Sociology of Immigration
+      - Sociology of Knowledge
+      - Sociology of Language
+      - Sociology of Law
+      - Sociology of Leisure
+      - Sociology of Literature
+      - Sociology of Markets
+      - Sociology of Marriage
+      - Sociology of Motherhood
+      - Sociology of Music
+      - Sociology of Natural Resources
+      - Sociology of Organizations
+      - Sociology of Peace, War, and Social Conflict
+      - Sociology of Punishment
+      - Sociology of Race and Ethnic Relations
+      - Sociology of Religion
+      - Sociology of Risk
+      - Sociology of Science
+      - Sociology of Scientific knowledge
+      - Sociology of Social Change
+      - Sociology of Social Movements
+      - Sociology of Space
+      - Sociology of Sport
+      - Sociology of Technology
+      - Sociology of Terrorism
+      - Sociology of The Body
+      - Sociology of The Family
+      - Sociology of The History of Science
+      - Sociology of The Internet
+      - Sociology of Work
+      - Sociomusicology
+      - Sociotechnical Systems Theory
+      - Software Engineering
+      - Soil Geography
+      - Soil Science
+      - Solid Mechanics
+      - Solid State Physics
+      - Solid-state Chemistry
+      - Sonochemistry
+      - Sound and Music Computing
+      - South Asian Studies
+      - Southeast Asian Studies
+      - Space
+      - Space Policy
+      - Special Education
+      - Special Forces
+      - Special Library
+      - Special Operations
+      - Speech Communication
+      - Speech-language Pathology
+      - Speleology
+      - Sport Management
+      - Sport Psychology
+      - Sports
+      - Sports Biomechanics
+      - Sports Coaching
+      - Sports Journalism
+      - Sports Journalism 
+      - Sports Medicine
+      - Sportscasting
+      - Staff
+      - Stage Design
+      - Star Formation
+      - Statistical Classification
+      - Statistical Mechanics
+      - Statistics
+      - Stellar Astrophysics
+      - Stellar Evolution
+      - Stellar Nucleosynthesis
+      - Stem Cell Research Policy
+      - Stochastic Process
+      - Stochastic Processes
+      - Strategic Geography
+      - Strategic Studies
+      - Strategy
+      - String Theory
+      - Strings, Harp, Oud, And Guitar
+      - Structural Biology
+      - Structural Engineering
+      - Structural Fire Protection
+      - Structural Mechanics
+      - Structural Sociology
+      - Studio Art
+      - Substantive Law
+      - Supply Chain Management
+      - Supramolecular Chemistry
+      - Supranational Law
+      - Surface Chemistry
+      - Surgery
+      - Surgical Pathology
+      - Surgical Strike
+      - Surveying
+      - Survival Skills
+      - Sustainability Studies
+      - Sustainable Development
+      - Symbolic Interactionism
+      - Syntax
+      - Synthetic Biology
+      - Synthetic Chemistry
+      - System Dynamics
+      - Systematic Musicology
+      - Systematic Theology
+      - Systematics Taxonomy
+      - Systemic Therapy
+      - Systems Analysis
+      - Systems Biology
+      - Systems Ecology
+      - Systems Engineering
+      - Systems Immunology
+      - Systems Neuroscience
+      - Systems Philosophy
+      - Systems Psychology
+      - Systems Science
+      - Systems Theory
+      - Systems Theory in Anthropology
+      - Tactical Objective
+      - Tactics
+      - Tax Law
+      - Tax Policy
+      - Taxonomic Classification
+      - Technical Drawing
+      - Technical Writing
+      - Technological History
+      - Technology and Equipment
+      - Technology Education
+      - Technology Policy
+      - Tectonics
+      - Telecommunications Engineering
+      - Teleology
+      - Television
+      - Television Studies
+      - Teratology
+      - Teuthology
+      - Textile Design
+      - Textiles
+      - Thai Studies
+      - The Stone Age
+      - Theater
+      - Theatre
+      - Theft
+      - Theism and Atheism
+      - Theology
+      - Theoretical Chemistry
+      - Theoretical Physics
+      - Theoretical Sociology
+      - Theory of Computation
+      - Thermal Physics
+      - Thermochemistry
+      - Thermodynamics
+      - Time Geography
+      - Topography
+      - Topos Theory
+      - Tort Law
+      - Total War
+      - Tourism Geography
+      - Toxicology
+      - Toy and Amusement Design
+      - Traditional Medicine
+      - Traffic Psychology
+      - Translation
+      - Transpersonal Psychology
+      - Transport Economics
+      - Transport Geography
+      - Transport Phenomena
+      - Transportation
+      - Transportation Engineering
+      - Trauma Surgery
+      - Traumatology
+      - Travel
+      - Trench Warfare
+      - Type Design
+      - Type Theory
+      - Ubiquitous Computing
+      - Unconventional
+      - Undercover
+      - Universal Algebra
+      - Urban Design
+      - Urban Geography
+      - Urban Planning
+      - Urban Studies or Urban Sociology
+      - Urology
+      - Usage
+      - User Experience Design
+      - User Experience Evaluation
+      - User Interface Design
+      - Utopian Studies
+      - UV Astronomy
+      - Vaccination Policy
+      - Value Theory
+      - Vector Space
+      - Vedic Study
+      - Vehicles
+      - Ventriloquism
+      - Veterinary Medicine
+      - Victimology
+      - Virology
+      - Virtue Ethics
+      - Visual Arts
+      - Visual Communication
+      - Visual Sociology
+      - Viticulture
+      - VLSI Design
+      - Vocational Education
+      - Volcanology
+      - War
+      - War Crimes
+      - Warfare
+      - Warrior
+      - Waste Management
+      - Welfare Economics
+      - Whiteness Studies
+      - Wildland Fire Management
+      - Wildlife Management
+      - Wildlife Observation
+      - Wind Ensemble Conducting
+      - Wireless Computing
+      - Women's Studies
+      - Woodcraft
+      - Woodwinds, Brass, and Percussion
+      - Word Usage
+      - World History
+      - World Literature
+      - World Wide Web
+      - World-Systems Theory
+      - X-ray Astronomy
+      - Xenobiology
+      - Zoology
+      - Zoosemiotics
+      - Zootomy

@@ -1,0 +1,220 @@
+version: "3.1"
+
+################################
+### Intents
+################################
+intents:
+  - greet
+  - request_coverletter:
+      use_entities:
+        - cv
+  - provide_name:
+      use_entities:
+        - name
+  - greet_smalltalk
+  - goodbye
+  - bot_challenge
+  - affirm
+  - deny
+  - not_sure
+  - out_of_scope_resume
+  - provide_education:
+      use_entities:
+        - education
+  - provide_profession:
+      use_entities:
+        - profession
+  - provide_skillset:
+      use_entities:
+        - skillset
+
+
+################################
+### Entities
+################################
+entities:
+  - cv
+  - name
+  - education
+  - profession
+  - skillset
+  - principle
+  - resume
+
+
+################################
+### Slots
+################################
+slots:
+  name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: name
+  qualification:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: education
+  principle:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: principle
+  title:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: profession
+        role: title
+  seniority:
+    type: categorical
+    values:
+      - Junior
+      - Senior
+      - Principal
+      - Staff
+      - Senior Staff
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: profession
+        role: seniority
+  skillset:
+    type: list
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: skillset
+
+
+################################
+### Responses
+################################
+responses:
+  utter_goodbye:
+  - text: "See you next time then. Bye~"
+  - text: "Great to talk to you thus far. See ya~"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_out_of_scope:
+  - text: "Sorry that, as of 19th Oct 2023, I am still a bot capable of composing Cover Letter only."
+
+  utter_bot_intro:
+  - text: "Hey there. I'm your GenRes Assistant. How can I help you today?"
+  - text: "Hi! My name is GenRes. How can I help you today?"
+
+  utter_smalltalk_intro:
+  - text: "Sup! I am your GenRes Assistant. How can I help you today?"
+  - text: "Yo, what's up! My name is GenRes. What can I do for you today?"
+
+  utter_request_details:
+  - text: "As cover letter has rigid structure, I would need more details from you. Is it alright?"
+  - text: "To write the cover letter, I would need more details from you to fit the structure. Are you good with it?"
+  - text: "To get start with the CV writing, I am going to request more details from you. Is that fine?"
+
+  utter_ask_name:
+  - text: "Sure. Before that, how can I address you?"
+  - text: "Sure. May I have your name please?"
+  - text: "Sure. Before that, what is your name?"
+
+  utter_ask_qualification:
+  - text: "What is your education background?"
+  - text: "What is your academic experience?"
+  - text: "Can you share your educational experience?"
+
+  utter_ask_title:
+  - text: "What is your current professional background?"
+  - text: "What is your current professional experience?"
+  - text: "Can you share your current professional background?"
+
+  utter_ask_skillset:
+  - text: "Any specific skillset of yours to highlight?"
+  - text: "Can you share more of your technical strength?"
+
+  utter_request_acknowledgement:
+  - text: "Is everything good?"
+  - text: "Is all information intact?"
+
+  utter_appreciation_and_wait:
+  - text: "Thank you for your confirmation. I will proceed with the submission. Please wait..."
+  - text: "Appreciate your acknowledgement. Please stay tuned while I am generating the request..."
+
+  utter_respond_denial:
+  - text: "I understand your consideration, thank you for considering it."
+  - text: "I appreciate your response and respect your choice."
+  - text: "Noted, I fully respect your decision."
+  - text: "Thank you for letting me know your consideration."
+
+  utter_collect_info:
+  - text: "Below are your personal information that we have collected:\n
+          \n
+          Personal Details:\n
+          -----------------\n
+          Name: {name}\n
+          \n
+          Educational Background:\n
+          -----------------------\n
+          Qualification: {qualification}\n
+          Principle: {principle}\n
+          \n
+          Professional Background:\n
+          ------------------------\n
+          Title: {title}\n
+          Seniority: {seniority}\n
+          \n
+          Skillset:\n
+          ---------\n
+          {skillset}\n
+          \n
+          "
+
+  utter_default:
+  - text: "Sorry, I could not get your last message. Can you repeat?"
+  - text: "I'm sorry, I didn't quite understand that. Could you rephrase?"
+  - text: "Beg you pardon. Can you rephrase as I could not quite get your last response."
+
+  utter_express_gratitude:
+  - text: "Thank you for using our service."
+  - text: "Hope you enjoy our service."
+
+  utter_ask_fallback_user_form:
+  - text: "Do you want to resubmit the form?"
+  - text: "Shall we restart the form submission?"
+
+  utter_ask_proceed_to_submit:
+  - text: "Shall we reattempt the submission?"
+  - text: "Do you mind to wait while we attempt to resolve the issue?"
+
+
+################################
+### Forms
+################################
+forms:
+  user_details_form:
+    required_slots:
+      - name
+      - qualification
+      - title
+      - skillset
+
+
+################################
+### Actions
+################################
+actions:
+  - action_ask_form_permission
+  - action_process_user_form
+  - action_submit_user_form
+  - action_generate_cover_letter
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

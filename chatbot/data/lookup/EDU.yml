@@ -1,0 +1,130 @@
+version: "3.1"
+nlu:
+  - lookup: education
+    examples: |
+      - grade 1
+      - grade 2
+      - grade 3
+      - grade 4
+      - grade 5
+      - grade 6
+      - grade 7
+      - grade 8
+      - grade 9
+      - grade 10
+      - grade 11
+      - grade 12
+      - grade 13
+      - Grade 1
+      - Grade 2
+      - Grade 3
+      - Grade 4
+      - Grade 5
+      - Grade 6
+      - Grade 7
+      - Grade 8
+      - Grade 9
+      - Grade 10
+      - Grade 11
+      - Grade 12
+      - Grade 13
+      - 1st grade 
+      - 2nd grade 
+      - 3rd grade 
+      - 4th grade 
+      - 5th grade 
+      - 6th grade 
+      - 7th grade 
+      - 8th grade 
+      - 9th grade 
+      - 10th grade
+      - 11th grade
+      - 12th grade
+      - 13th grade
+      - Year 1
+      - Year 2
+      - Year 3
+      - Year 4
+      - Year 5
+      - Year 6
+      - Year 7
+      - Year 8
+      - Year 9
+      - Year 10
+      - Year 11
+      - Year 12
+      - Year 13
+      - year 1
+      - year 2
+      - year 3
+      - year 4
+      - year 5
+      - year 6
+      - year 7
+      - year 8
+      - year 9
+      - year 10
+      - year 11
+      - year 12
+      - year 13
+      - Form 1
+      - Form 2
+      - Form 3
+      - Form 4
+      - Form 5
+      - Form 6
+      - Form 7
+      - Form 8
+      - Form 9
+      - Form 10
+      - Form 11
+      - Form 12
+      - Form 13
+      - form 1
+      - form 2
+      - form 3
+      - form 4
+      - form 5
+      - form 6
+      - form 7
+      - form 8
+      - form 9
+      - form 10
+      - form 11
+      - form 12
+      - form 13
+      - primary school
+      - secondary school
+      - high school
+      - elementary school
+      - university
+      - degree
+      - master
+      - master degree
+      - doctor of philosophy
+      - Primary school
+      - Secondary school
+      - High school
+      - Elementary school
+      - University
+      - Degree
+      - Master
+      - Master Degree
+      - Doctor of Philosophy
+      - GCE O
+      - GCE A
+      - GCEO
+      - GCEA
+      - O Level
+      - A Level
+      - Vocational
+      - Poly
+      - Polytechnic
+      - Doctoral
+      - phd
+      - PhD
+      - PHD
+      - phD
+
+
+    
