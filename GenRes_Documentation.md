@@ -266,7 +266,7 @@
 
 ## Prompt LLM Model
 For first-hand experience with our fine-tuned LLM model, please follow instructions below to prompt the T5 model:
-1. after git clone this project, cd to chatbot/llm folder
+1. after git clone this project, cd to `chatbot/llm` folder
 2. currently, our T5 model can take in these inputs:
     ```
     user_name
