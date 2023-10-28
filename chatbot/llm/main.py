@@ -1,4 +1,4 @@
-from prediction import generate_cover_letter
+from llm.prediction import generate_cover_letter
 
 if __name__ == '__main__':
     model_name="t5-base-fine-tune-1024"

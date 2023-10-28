@@ -1,5 +1,5 @@
 # from llm import *
-import main as llm
+import llm.main as llm
 
 def prepare_input(user_name, job_title, qualification, skillset, past_working_experience, preferred_qualification=None, hiring_company_name="ABC Company & Co", current_working_experience=None):
     return {
