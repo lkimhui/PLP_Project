@@ -1,7 +1,10 @@
 # T5 model Usage
 
-Plese find below example how to generate cover letter for input directly from huggingface.
+This code serves as an example of using the Hugging Face Transformers library to automate the generation of cover letters for job applications. 
+It uses a pre-trained T5 model fine-tuned specifically for this task. 
 
+You can easily customize the input data by changing the values of variables like job_title, preferred_qualifications, hiring_company_name, and others. 
+This allows you to generate cover letters tailored to specific job applications.
 ### Running the model on a GPU
 
 
@@ -157,3 +160,4 @@ try:
     print("Excel file saved successfully.")
 except Exception as e:
     print(f"An error occurred while saving the Excel file: {str(e)}")
+```
