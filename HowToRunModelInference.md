@@ -69,12 +69,8 @@ print(output_text)
 
 # Llama2 model Usage 
 
-# To note Prompting Format for Llama2 chat model. Notes as follows. 
-•	<s>: the beginning of the entire sequence.
-•	<<SYS>>\n: the beginning of the system message.
-•	\n<</SYS>>\n\n: the end of the system message.
-•	[INST]: the beginning of some instructions.
-•	[/INST]: the ending of instructions.
+Plese find below example how using llama2 model loaded from Hugging Face.
+Note on Prompt format for llama2 chat model (Different from above T5 and Falcon)
 
 ### Running the model on GPU (A100 GPU on Google Collab)
 
