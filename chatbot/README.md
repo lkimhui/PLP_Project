@@ -52,7 +52,7 @@
 
 # Integration
 1. Web HTML with Chat Widget
-    - create a .html page within the same folder
+    - create a .html page within the same folder (sample stored in resources folder)
     - paste below script within html body
     - on cmd line, run:
 	```bash

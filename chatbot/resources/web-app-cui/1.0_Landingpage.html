@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .carousel-container {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            animation: slide 10s linear infinite;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .button {
+        background-color: #8734db;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border: none;
+        border-radius: 20px; /* Adjust the value to control the roundness */
+        display: inline-block;
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <div class="carousel-container">
+        <div class="carousel">
+            <img src="https://thelonelypetunia.files.wordpress.com/2014/12/man-in-office.jpg" alt="Image 1">
+            <img src="https://appfluence.com/productivity/wp-content/uploads/2018/10/appfluence.comproductivityexecutive-assistant-career-path.jpg" alt="Image 2">
+            <img src="https://blog.bernieportal.com/hubfs/iStock-947192656.jpg" alt="Image 3">
+            <!-- Add more images here -->
+        </div>
+    </div>
+    <div class="content">
+      <p style="font-size: 24px; font-weight: bold; line-height: 1.5;">
+        <span style="background-color: rgba(255, 255, 255, 0.6);">Welcome to GenRes Cover Letter Generator!</span><br>
+        <span style="background-color: rgba(255, 255, 255, 0.6);">Crafting a compelling cover letter has never been easier.</span><br>
+        <span style="background-color: rgba(255, 255, 255, 0.6);">Let our chat bot guide you through the process.</span>
+      </p>
+      <a href="Y:\Documents\Personal Development\NUS\ISS\04 PLP\Project\RASA_Py3.7\webchat.html" class="button">Hi GenRes!</a>
+    </div>
+
+    <script>
+        // Optional JavaScript for additional customization
+    </script>
+</body>
+</html>

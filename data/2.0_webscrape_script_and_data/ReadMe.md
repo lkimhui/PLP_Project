@@ -1,0 +1,2 @@
+# On top of the open-source data, the team also created webscrape capability to enable more open data sourcing.
+# With this webscrape code, the team is now access to more open and up-to-date data for future work such as model training and fine-tuning purpose.
