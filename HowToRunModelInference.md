@@ -95,7 +95,62 @@ print(output_text)
 
 ```
 
-# Falcon model Usage (Additional Notes)
+# Falcon model Usage
+### Running the model on GPU (A100 GPU on Google Colab)
+
+#load the falcon 7b model and tokenize
+finetunedmodel = AutoModelForCausalLM.from_pretrained(
+    "wanqi27/falcon-7b-finetuned",
+    trust_remote_code=True,
+)
+
+tokenizer = AutoTokenizer.from_pretrained(
+    "wanqi27/falcon-7b-finetuned",
+)
+
+job_title = "Senior Java Developer"
+preferred_qualification = "3+ years of Java, Spring Boot"
+hiring_company_name = "Google"
+user_name = "Emily Evans"
+past_working_experience= "Java Developer at XYZ for 4 years"
+current_working_experience = "Senior Java Developer at ABC for 1 year"
+skilleset= "Java, Spring Boot, Microservices, SQL, AWS"
+qualification = "Master's in Electronics Science"
+input_text = f" Generate Cover Letter for Role: {job_title}, \
+ Preferred Qualifications: {preferred_qualification}, \
+ Hiring Company: {hiring_company_name}, User Name: {user_name}, \
+ Past Working Experience: {past_working_experience}, Current Working Experience: {current_working_experience}, \
+ Skillsets: {skilleset}, Qualifications: {qualification} "
+
+#creating the prompt
+prompt = f"""
+    <human>: {input_text}
+    <assistant>:
+    """.strip()
+
+#encode the prompt
+encoding = tokenizer.encode(prompt, return_tensors= "pt", max_length=2048, truncation=False, padding=True)
+
+#import torch
+import torch
+
+#set the generation configuration params
+gen_config = finetunedmodel.generation_config
+gen_config.max_new_tokens = 250
+gen_config.temperature = 0.2
+gen_config.top_p = 0.7
+gen_config.num_return_sequences = 1
+gen_config.pad_token_id = tokenizer.eos_token_id
+gen_config.eos_token_id = tokenizer.eos_token_id
+gen_config.do_sample = True  
+gen_config.use_cache = False
+
+#produce a prediction
+with torch.inference_mode():
+    outputs = finetunedmodel.generate(input_ids=encoding, generation_config=gen_config)
+
+decoded_output = tokenizer.decode(outputs[0], skip_special_tokens=True)
+print(decoded_output)
 
 
 
