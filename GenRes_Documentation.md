@@ -135,7 +135,7 @@
 	```
 
 5. Web HTML with Chat Widget
-    - create a .html page within the same folder if index.html could not be found (sample html stored in resources folder)
+    - create a .html page within the same folder if index.html could not be found (sample html stored in 'chatbot\resources\web-app-cui' folder)
     - paste below script within html body
 	In your `<body/>`:
 	```html
