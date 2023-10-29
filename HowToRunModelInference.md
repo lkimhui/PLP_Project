@@ -119,20 +119,6 @@ def generate_cover_letter2(row):
     generated_text = get_llama_response2(prompt)
     return generated_text
 
-# Define User Inputs
-# Run text generation pipeline with our next model
-# format the input to match llama e's prompt template
-prompt = """<<SYS>>Generate a structured cover letter for given user input<</SYS>>
-  Job Title: Data Analyst,
-  Preferred Qualifications: Bachelor in Data Science or Economics,
-  Hiring Company: Accenture,
-  Applicant Name: Oliver Jane,
-  Past Work Experience: AI Engineer at Tesla for 2 years,
-  Current Working Experience: Generative AI Engineer at Apple for 3 years,
-  Skillsets: Python, C++, AI, Machine Learning, Generative Models,
-  Qualifications: Masters in Data Science
-"""
-
 # Generate cover letters and save them in a new column in an output excel file
 df['Generated Cover Letter by 7b-chat-fine-tuned'] = df.apply(generate_cover_letter2, axis=1)
 output_file_path = '/content/gdrive/MyDrive/Colab Data/cover_letter_data_test_first10_add2.xlsx'
