@@ -98,6 +98,7 @@ print(output_text)
 # Falcon model Usage
 ### Running the model on GPU (A100 GPU on Google Colab)
 
+```python
 #load the falcon 7b model and tokenize
 finetunedmodel = AutoModelForCausalLM.from_pretrained(
     "wanqi27/falcon-7b-finetuned",
@@ -152,8 +153,7 @@ with torch.inference_mode():
 decoded_output = tokenizer.decode(outputs[0], skip_special_tokens=True)
 print(decoded_output)
 
-
-
+```
 
 # Llama2 model Usage 
 
