@@ -61,3 +61,69 @@ output_text = tokenizer.decode(output_ids[0], skip_special_tokens=True)
 print("Generated Cover Letter:")
 print(output_text)
 ```
+
+# Falcon model Usage (Additional Notes)
+
+
+
+
+# Llama2 model Usage 
+
+Plese find below example how using llama2 model loaded from Hugging Face.
+Note on Prompt format for llama2 chat model (Different from above T5 and Falcon)
+
+### Running the model on GPU (A100 GPU on Google Collab)
+
+```python
+from datasets import load_dataset
+from transformers import AutoTokenizer
+from transformers import pipeline
+
+model2="kwanyick/llama-2-7b-chat-cover-letter"
+tokenizer2 = AutoTokenizer.from_pretrained(model2, use_auth_token=True)
+
+# using text-generation pipeline for Llama-2-7b-chat-hf
+llama_pipeline2 = pipeline(
+    task="text-generation",
+    model=model2,
+    tokenizer=tokenizer2,
+    max_length=400
+)
+
+def get_llama_response2(prompt: str) -> None:
+    """
+    Generate a structured cover letter for given user input.
+
+    Parameters:
+        prompt (str): The user's input/question for the model.
+
+    Returns:
+        None: Prints the model's response.
+    """
+    # Format the input to match llama's prompt template
+    sequences = llama_pipeline2(f"<s>[INST] {prompt} [/INST]")
+    print("Cover letter:", sequences[0]['generated_text'])
+
+# Define the function to generate cover letters using training datasets
+# Format the input to match llama's prompt template
+def generate_cover_letter2(row):
+    prompt = f"""<<SYS>>Generate a structured cover letter for given user input<</SYS>>
+      Job Title: {row['Job Title']},
+      Preferred Qualifications: {row['Preferred Qualifications']},
+      Hiring Company: {row['Hiring Company']},
+      Applicant Name: {row['Applicant Name']},
+      Past Working Experience: {row['Past Working Experience']},
+      Current Working Experience: {row['Current Working Experience']},
+      Skillsets: {row['Skillsets']},
+      Qualifications: {row['Qualifications']}"""
+    generated_text = get_llama_response2(prompt)
+    return generated_text
+
+# Generate cover letters and save them in a new column in an output excel file
+df['Generated Cover Letter by 7b-chat-fine-tuned'] = df.apply(generate_cover_letter2, axis=1)
+output_file_path = '/content/gdrive/MyDrive/Colab Data/cover_letter_data_test_first10_add2.xlsx'
+try:
+    df.to_excel(output_file_path, index=False)
+    print("Excel file saved successfully.")
+except Exception as e:
+    print(f"An error occurred while saving the Excel file: {str(e)}")
