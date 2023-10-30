@@ -1,3 +1,12 @@
+# Pre-requisite 
+
+Please install below python libraries for run model for generating cover letter.
+
+```shell
+pip install transformers 
+pip install SentencePiece
+```
+
 # T5 model Usage
 
 This code serves as an example of using the Hugging Face Transformers library to automate the generation of cover letters for job applications. 
