@@ -1,4 +1,8 @@
-# Pre-requisite 
+# How to Use FineTuned Models from Huggingface
+
+This document provides how you can download fine tuned model from huggingface and generate cover letter by prompting model.
+
+## Pre-requisite 
 
 Please install below python libraries for run model for generating cover letter.
 
@@ -7,7 +11,7 @@ pip install transformers
 pip install SentencePiece
 ```
 
-# T5 model Usage
+## T5 model Usage
 
 This code serves as an example of using the Hugging Face Transformers library to automate the generation of cover letters for job applications. 
 It uses a pre-trained T5 model fine-tuned specifically for this task. 
@@ -104,7 +108,7 @@ print(output_text)
 
 ```
 
-# Falcon model Usage
+## Falcon model Usage
 ### Running the model on GPU (A100 GPU on Google Colab)
 
 ```python
@@ -164,9 +168,9 @@ print(decoded_output)
 
 ```
 
-# Llama2 model Usage 
+## Llama2 model Usage 
 
-Plese find below example how using llama2 model loaded from Hugging Face.
+Please find below example how using llama2 model loaded from Hugging Face.
 Note on Prompt format for llama2 chat model (Different from above T5 and Falcon)
 
 ### Running the model on GPU (A100 GPU on Google Collab)
